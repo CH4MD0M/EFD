@@ -1,33 +1,3 @@
-// COLOR VARIABLES
-$color-primary: #70c570;
-$color-primary-dark-1: #5ea15e;
-$color-primary-dark-2: #4e8a4e;
-
-$color-secondary: #e36b2c;
-$color-secondary-dark-1: #dc5925;
-
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
-
-$color-grey-dark: #777;
-$color-grey-dark-2: #999;
-$color-grey-dark-3: #333;
-
-$color-white: #fff;
-$color-black: #000;
-
-//FONT
-$default-font-size: 1.6rem;
-
-// SHADOW
-$shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-
-// RESPONSIVE BREAKPOINTS
-$bp-largest: 75em; // 1200px
-$bp-large: 62.5em; // 1000px
-$bp-medium: 50em; // 800px
-$bp-small: 37.5em; // 600px;
-
 *,
 *::before,
 *::after {
@@ -55,6 +25,7 @@ body {
     [full-start] minmax(6rem, 1fr) [center-start]repeat(
       4,
       [col-start] minmax(min-content, 14rem) [col-end]
-    ) [center-end]minmax(6rem, 1fr)
+    )
+    [center-end]minmax(6rem, 1fr)
     [full-end];
 }
