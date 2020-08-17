@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <title>EFDkorea</title>
   </head>
@@ -16,67 +26,108 @@
         <ul class="nav">
           <!-- Home -->
           <li class="nav__item active">
-            <a href="#" class="nav__link">Home</a>
+            <a href="#" class="nav__link">
+              <svg class="home__icon">
+                <use xlink:href="img/sprite.svg#icon-home"></use>
+              </svg>
+              <span>Home</span>
+            </a>
           </li>
 
           <!-- 교육안내 -->
           <li class="nav__item">
-            <a href="#" class="nav__link">교육 안내</a>
+            <a href="#" class="nav__link">
+              <svg class="nav__icon">
+                <use
+                  xlink:href="img/sprite.svg#icon-keyboard_arrow_right"
+                ></use>
+              </svg>
+              <span>교육안내</span>
+            </a>
+
             <ul class="dropdown">
               <li class="dropdown__item">
-                <a href="#" class="dropdown__link">초등부 과정</a>
+                <a href="#" class="dropdown__link">
+                  <span>초등부 과정</span>
+                </a>
               </li>
 
               <li class="dropdown__item">
-                <a href="#" class="dropdown__link">중등부 과정</a>
+                <a href="#" class="dropdown__link">
+                  <span>중등부 과정</span>
+                </a>
               </li>
 
               <li class="dropdown__item">
-                <a href="#" class="dropdown__link">고등부 과정</a>
+                <a href="#" class="dropdown__link">
+                  <span>고등부 과정</span>
+                </a>
               </li>
             </ul>
           </li>
 
           <!-- 교육자료소개 -->
           <li class="nav__item">
-            <a href="#" class="nav__link">교육자료 소개</a>
+            <a href="#" class="nav__link">
+              <svg class="nav__icon">
+                <use
+                  xlink:href="img/sprite.svg#icon-keyboard_arrow_right"
+                ></use>
+              </svg>
+              <span>교육자료 소개</span>
+            </a>
+
             <ul class="dropdown">
               <li class="dropdown__item">
-                <a href="#" class="dropdown__link">Elementary</a>
+                <a href="#" class="dropdown__link">
+                  <span>Elementary</span>
+                </a>
               </li>
 
               <li class="dropdown__item">
-                <a href="#" class="dropdown__link">Middle</a>
+                <a href="#" class="dropdown__link">
+                  <span>Middle</span>
+                </a>
               </li>
 
               <li class="dropdown__item">
-                <a href="#" class="dropdown__link">High</a>
+                <a href="#" class="dropdown__link"> <span>High</span></a>
               </li>
             </ul>
           </li>
 
           <!-- 고객지원 -->
           <li class="nav__item">
-            <a href="#" class="nav__link">고객 지원</a>
+            <a href="#" class="nav__link">
+              <svg class="nav__icon">
+                <use
+                  xlink:href="img/sprite.svg#icon-keyboard_arrow_right"
+                ></use>
+              </svg>
+              <span>고객 지원</span>
+            </a>
+
             <ul class="dropdown">
               <li class="dropdown__item">
-                <a href="#" class="dropdown__link">공지사항</a>
+                <a href="#" class="dropdown__link"> <span>공지사항</span></a>
               </li>
 
               <li class="dropdown__item">
-                <a href="#" class="dropdown__link">Q&A</a>
+                <a href="#" class="dropdown__link"> <span>Q&A</span></a>
               </li>
             </ul>
           </li>
 
           <!-- 나의 강의실 -->
           <li class="nav__item">
-            <a href="#" class="nav__link">My class</a>
-            <ul class="dropdown">
-              <li class="dropdown__item">
-                <a href="#" class="dropdown__link"></a>
-              </li>
-            </ul>
+            <a href="#" class="nav__link">
+              <svg class="nav__icon">
+                <use
+                  xlink:href="img/sprite.svg#icon-keyboard_arrow_right"
+                ></use>
+              </svg>
+              <span>My class</span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -85,6 +136,21 @@
     <!-- HEADER -->
     <header class="header">
       <!-- 이미지 슬라이더 -->
+
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
     </header>
 
     <!-- HOME SECTION -->
