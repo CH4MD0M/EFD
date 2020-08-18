@@ -1,15 +1,17 @@
 .navigation {
+  display: flex;
   background-color: $color-primary;
   grid-column: full-start/full-end;
-  display: flex;
   justify-content: space-between;
+  border-bottom: 4px dashed $color-primary-dark-1;
 
   &__logo {
-    color: $color-white;
-    font-size: 4rem;
-    font-weight: 700;
-    align-self: center;
-    margin-left: 10rem;
+    margin-left: 15rem;
+    margin-top: -3rem;
+
+    & img {
+      width: 40rem;
+    }
   }
 
   &__nav {
@@ -21,48 +23,30 @@
 
 .nav {
   display: flex;
-  position: relative;
   justify-content: space-between;
   list-style: none;
   text-align: center;
 
+  // NAVIGATION ITEM
   &__item {
     margin: 0 2rem;
     height: 6rem;
     position: relative;
     transition: 0.2s;
 
-    &.active {
-      position: relative;
-      background-color: $color-primary-dark-1;
-      width: 15rem;
-      padding: 0 2rem;
-      border-radius: 15px;
-
-      &::after {
-        content: "";
-        width: inherit;
-        position: absolute;
-        background-color: $color-primary-dark-2;
-        height: 6rem;
-        left: 0;
-        top: 0.4rem;
-        border-radius: 15px;
-        z-index: -1;
-      }
-    }
-
     &:hover {
       transform: scale(1.1);
     }
+
+    // HOME ICON
+    .home__icon {
+      width: 3rem;
+      fill: $color-white;
+      margin-right: 0.5rem;
+    }
   }
 
-  .home__icon {
-    width: 3rem;
-    fill: $color-white;
-    margin-right: 0.5rem;
-  }
-
+  // NAVIGATION LINK
   &__link {
     &:link,
     &:visited {
@@ -77,15 +61,16 @@
   }
 
   &__icon {
-    opacity: 0;
+    margin-right: 1rem;
     width: 4rem;
     height: 4rem;
-    margin-right: 1rem;
     fill: $color-white;
+    opacity: 0;
     transition: all 0.2s;
   }
 }
 
+// DROPDOWN
 .dropdown {
   position: absolute;
   top: 100%;
@@ -93,8 +78,8 @@
   width: 23rem;
   background-color: $color-secondary-dark-1;
   border-radius: 15px;
-  opacity: 0;
-  transition: 0.2s ease-in 0.2s;
+  display: none;
+  transition: all 0.5s;
 
   &__item {
     &:nth-child(1) {
@@ -119,6 +104,17 @@
       transition: all 0.2s;
     }
 
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      left: 2rem;
+      top: -0.8rem;
+      background-color: $color-secondary-dark-1;
+      transform: rotate(45deg);
+    }
+
     &:hover {
       background-color: $color-primary;
     }
@@ -127,17 +123,15 @@
       animation: moveInLeft 1s;
     }
   }
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    left: 2rem;
-    top: -0.8rem;
-    background-color: $color-secondary-dark-1;
-    transform: rotate(45deg);
-  }
+.active {
+  position: relative;
+  background-color: $color-primary-dark-1;
+  width: 15rem;
+  padding: 0 2rem;
+  border-radius: 15px;
+  border-bottom: 3px solid $color-primary-dark-2;
 }
 
 // ANIMATION
@@ -146,5 +140,5 @@
 }
 
 .nav__item:hover > .dropdown {
-  opacity: 1;
+  display: inline-block;
 }

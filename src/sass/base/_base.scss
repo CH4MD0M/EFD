@@ -21,7 +21,7 @@ body {
 .container {
   display: grid;
 
-  grid-template-rows: 10rem 80vh min-content 40vw repeat(2, min-content);
+  grid-template-rows: 14rem 60vh min-content 40vw repeat(2, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start]repeat(
       4,

@@ -21,7 +21,9 @@
   <body class="container">
     <!-- NAVIGATION BAR -->
     <div class="navigation">
-      <div class="navigation__logo">EFD korea</div>
+      <div class="navigation__logo">
+        <img src="img/nav-logo.png" alt="logo" />
+      </div>
       <nav class="navigation__nav">
         <ul class="nav">
           <!-- Home -->
@@ -140,16 +142,104 @@
       <!-- Swiper -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
+          <div
+            class="swiper-slide slide-1"
+            style="background-image: url('img/slide/slide-1.png');"
+          >
+            <div class="slide__content">
+              <div class="caption">
+                <h1 class="caption__title">Title</h1>
+                <p class="caption__content">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide slide-2"
+            style="background-image: url('img/slide/slide-2.png');"
+          >
+            <div class="slide__content">
+              <div class="caption">
+                <h1 class="caption__title">Title</h1>
+                <p class="caption__content">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide slide-3"
+            style="background-image: url('img/slide/slide-3.png');"
+          >
+            <div class="slide__content">
+              <div class="caption">
+                <h1 class="caption__title">Title</h1>
+                <p class="caption__content">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide slide-4"
+            style="background-image: url('img/slide/slide-1.png');"
+          >
+            <div class="slide__content">
+              <div class="caption">
+                <h1 class="caption__title">Title</h1>
+                <p class="caption__content">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide slide-5"
+            style="background-image: url('img/slide/slide-2.png');"
+          >
+            <div class="slide__content">
+              <div class="caption">
+                <h1 class="caption__title">Title</h1>
+                <p class="caption__content">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <button class="caption__btn">Button</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide slide-6"
+            style="background-image: url('img/slide/slide-3.png');"
+          >
+            <div class="slide__content">
+              <div class="caption">
+                <h1 class="caption__title">Title</h1>
+                <p class="caption__content">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <!-- Add Scrollbar -->
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper-button-next">
+          <svg class="next__icon">
+            <use xlink:href="img/sprite.svg#icon-circle-right"></use>
+          </svg>
+        </div>
+        <div class="swiper-button-prev">
+          <svg class="prev__icon">
+            <use xlink:href="img/sprite.svg#icon-circle-left"></use>
+          </svg>
+        </div>
+
+        <div class="swiper-pagination"></div>
       </div>
     </header>
 
