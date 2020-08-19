@@ -1,6 +1,6 @@
 var swiper = new Swiper(".swiper-container", {
   loop: true,
-  // autoplay: true,
+  autoplay: true,
   speed: 1500,
 
   pagination: {
