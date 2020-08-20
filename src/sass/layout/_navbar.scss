@@ -34,7 +34,7 @@
 
   // NAVIGATION ITEM
   &__item {
-    margin: 0 1.5rem;
+    margin: 0 1rem;
     height: 6rem;
     position: relative;
     transition: all 0.2s;
@@ -59,7 +59,7 @@
       align-items: center;
       width: 100%;
       height: 6rem;
-      font-size: 2.4rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: $color-white;
       text-decoration: none;
@@ -101,7 +101,7 @@
       padding: 0.5rem;
       margin: 0 0.5rem;
       margin-bottom: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: $color-white;
       text-decoration: none;
       background-color: $color-secondary;
@@ -132,11 +132,18 @@
 
 .active {
   position: relative;
-  background-color: $color-primary-dark-1;
-  width: 12rem;
+  align-self: center;
+  width: 10rem;
+  height: 5rem;
   padding: 0 1rem;
+  background-color: $color-primary-dark-1;
   border-radius: 15px;
   border-bottom: 3px solid $color-primary-dark-2;
+
+  & > a > svg,
+  span {
+    margin-bottom: 1.1rem;
+  }
 }
 
 // ANIMATION

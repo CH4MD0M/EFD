@@ -16,9 +16,7 @@ body {
   color: $color-grey-dark-2;
   font-weight: 300;
   line-height: 1.6;
-  // font-family: "Nanum Myeongjo", serif;
-  // font-family: "Jua", sans-serif;
-  font-family: "Sunflower", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .container {
@@ -26,10 +24,8 @@ body {
 
   grid-template-rows: 11rem 60vh min-content 40vw repeat(2, min-content);
   grid-template-columns:
-    [full-start] minmax(6rem, 1fr) [center-start]repeat(
-      4,
-      [col-start] minmax(min-content, 14rem) [col-end]
-    )
-    [center-end]minmax(6rem, 1fr)
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(4, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
     [full-end];
 }
