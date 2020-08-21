@@ -1,25 +1,26 @@
 .homes {
-  grid-column: full-start / full-end;
-}
+  grid-column: center-start / center-end;
 
-.home {
+  margin: 12rem 0;
+
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  background-color: $color-grey-light-2;
 
-  &__titles {
-    margin: 20rem 0 10rem 0;
-    padding: 1.5rem 40rem;
-    font-size: 5rem;
-    font-weight: 700;
+  &__title {
     color: $color-black;
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 10rem;
   }
 
   &__items {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20rem;
+    margin: 0 10rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1 / -1;
+    grid-gap: 5rem;
   }
 }
 
@@ -27,22 +28,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 5rem;
-  padding: 2rem;
-  width: 40rem;
-  background: $color-grey-light-1;
-  border-radius: 18px;
-  box-shadow: $shadow;
 
-  &__icon > img {
-    width: 13rem;
-    margin: 6rem 0 1rem 0;
+  &__icon {
+    margin-bottom: 4rem;
+
+    & > img {
+      width: 13rem;
+    }
   }
 
   &__content {
     display: inline-block;
+    padding: 1rem;
     text-align: center;
-    margin: 3rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }

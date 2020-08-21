@@ -24,8 +24,8 @@ body {
 
   grid-template-rows: 11rem 60vh min-content 40vw repeat(2, min-content);
   grid-template-columns:
-    [full-start] minmax(6rem, 1fr)
-    [center-start] repeat(4, [col-start] minmax(min-content, 14rem) [col-end])
-    [center-end] minmax(6rem, 1fr)
+    [full-start] 1fr
+    [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] 1fr
     [full-end];
 }
