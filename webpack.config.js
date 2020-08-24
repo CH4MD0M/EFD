@@ -12,32 +12,19 @@ module.exports = {
     filename: "js/bundle.js",
   },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./src/index.html",
-    }),
-
-    // 컴파일 + 번들링 CSS 파일이 저장될 경로와 이름 지정
-    new MiniCssExtractPlugin({
-      filename: "css/style.css",
-    }),
-  ],
-
   module: {
     rules: [
       {
         test: /\.js/,
         include: [path.resolve(__dirname, "src/js")],
-        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env"],
           },
         },
-        exclude: /node_modules/,
       },
+
       {
         test: /\.scss/,
         use: [
@@ -45,10 +32,33 @@ module.exports = {
           "css-loader", // translates CSS into CommonJS
           "sass-loader", // compiles Sass to CSS, using Node Sass by default
         ],
-        exclude: /node_modules/,
+      },
+
+      {
+        test: /\.png$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              publicPath: "../dist",
+            },
+          },
+        ],
       },
     ],
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+      filename: "index.html",
+    }),
+
+    // 컴파일 + 번들링 CSS 파일이 저장될 경로와 이름 지정
+    new MiniCssExtractPlugin({
+      filename: "css/style.css",
+    }),
+  ],
 
   devServer: {
     contentBase: "./dist",
