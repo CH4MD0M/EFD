@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   // entry files
@@ -29,18 +30,16 @@ module.exports = {
         test: /\.scss/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader", // translates CSS into CommonJS
-          "sass-loader", // compiles Sass to CSS, using Node Sass by default
-        ],
-      },
-
-      {
-        test: /\.png$/,
-        use: [
           {
-            loader: "file-loader",
+            loader: "css-loader", // translates CSS into CommonJS
             options: {
-              publicPath: "../dist",
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "sass-loader", // compiles Sass to CSS, using Node Sass by default
+            options: {
+              sourceMap: true,
             },
           },
         ],
@@ -57,6 +56,13 @@ module.exports = {
     // 컴파일 + 번들링 CSS 파일이 저장될 경로와 이름 지정
     new MiniCssExtractPlugin({
       filename: "css/style.css",
+    }),
+
+    new CopyWebpackPlugin({
+      patterns: [{ from: "./src/img/", to: "./img" }],
+      options: {
+        concurrency: 100,
+      },
     }),
   ],
 
