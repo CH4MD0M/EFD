@@ -1,4 +1,39 @@
+.contents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  padding: 3rem;
+}
+
 .content {
-  background-color: $color-grey-light-1;
+  background-color: $color-white;
   grid-column: center-start / center-end;
+  margin: 8rem 0;
+
+  &__box {
+    display: inline-block;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 4rem;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__paragraph {
+    font-size: 2rem;
+    margin: 4rem 0;
+  }
+
+  &__icon {
+    width: 6rem;
+    margin: 0 2rem;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
