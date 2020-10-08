@@ -13,6 +13,14 @@
   &__box {
     display: inline-block;
     text-align: center;
+
+    & > ul {
+      margin-top: 2rem;
+      list-style: none;
+      & > li {
+        margin: 2rem 0;
+      }
+    }
   }
 
   &__title {

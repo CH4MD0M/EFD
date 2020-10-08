@@ -59,6 +59,14 @@ module.exports = {
       template: "src/index.html",
       filename: "index.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "src/signin.html",
+      filename: "signin.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/signup.html",
+      filename: "signup.html",
+    }),
 
     // 컴파일 + 번들링 CSS 파일이 저장될 경로와 이름 지정
     new MiniCssExtractPlugin({
