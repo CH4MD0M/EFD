@@ -1,9 +1,10 @@
 .footer {
   background-color: $color-primary;
   grid-column: full-start / full-end;
-  padding: 8rem;
+  padding: 1rem;
 
   &__nav {
+    margin-top: 2rem;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -31,7 +32,7 @@
     font-style: 1.4rem;
     color: $color-grey-light-2;
     text-align: center;
-    margin: 10rem auto 0 auto;
+    margin: 5rem auto 0 auto;
     width: 70%;
   }
 }

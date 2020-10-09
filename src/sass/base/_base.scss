@@ -22,7 +22,17 @@ body {
 .container {
   display: grid;
 
-  grid-template-rows: 11rem 60vh min-content 40vw repeat(2, min-content);
+  grid-template-rows: 11rem 60vh min-content 40vw min-content 20rem;
+  grid-template-columns:
+    [full-start] 1fr
+    [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] 1fr
+    [full-end];
+}
+
+.signinContainer {
+  display: grid;
+  grid-template-rows: 11rem 80vh 20rem;
   grid-template-columns:
     [full-start] 1fr
     [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end])

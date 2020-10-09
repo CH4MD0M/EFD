@@ -1,0 +1,97 @@
+.signin {
+  grid-column: full-start/full-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-black, 0.4),
+      rgba($color-black, 0.1)
+    ),
+    url(../img/slide/slide-2.png);
+  background-size: cover;
+
+  &__title {
+    font-size: 2rem;
+    width: max-content;
+    color: $color-white;
+    margin-bottom: 4rem;
+    border-bottom: 3px solid $color-secondary;
+  }
+
+  .int-area:first-child {
+    margin-top: 0;
+  }
+  .int-area {
+    position: relative;
+    width: 50rem;
+    margin-top: 1rem;
+
+    & > input {
+      width: 100%;
+      padding: 2rem 1rem 1rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #999;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: $color-white;
+      outline: none;
+    }
+
+    & > input:focus + label,
+    & > input:valid + label {
+      top: 0;
+      font-size: 1.3rem;
+      color: $color-secondary;
+    }
+
+    & > label {
+      position: absolute;
+      left: 0.5rem;
+      top: 2rem;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: $color-white;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &__box {
+    &--id > input {
+    }
+
+    &--pw > input {
+    }
+
+    &--btn {
+      margin: 4rem 0 2rem 0;
+      & > button {
+        width: 100%;
+        height: 5rem;
+        background: $color-secondary;
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: $color-white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__caption {
+    margin-top: 3rem;
+    text-align: right;
+
+    & > a:first-child {
+      margin-right: 4rem;
+    }
+
+    & > a:link,
+    :visited {
+      color: $color-white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
+}
