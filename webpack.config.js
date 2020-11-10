@@ -79,6 +79,13 @@ module.exports = {
         concurrency: 100,
       },
     }),
+
+    new CopyWebpackPlugin({
+      patterns: [{ from: "./src/php", to: "./php" }],
+      options: {
+        concurrency: 100,
+      },
+    }),
   ],
 
   devServer: {
