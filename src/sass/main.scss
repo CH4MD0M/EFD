@@ -1,13 +1,14 @@
-@import "base/variable";
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
+@import 'base/variable';
+@import 'base/base';
+@import 'base/animations';
+@import 'base/typography';
 
-@import "layout/navbar";
-@import "layout/header";
-@import "layout/footer";
+@import 'layout/navbar';
+@import 'layout/header';
+@import 'layout/footer';
 
-@import "page/homes";
-@import "page/preview";
-@import "page/content";
-@import "page/signin";
+@import 'page/homes';
+@import 'page/preview';
+@import 'page/content';
+@import 'page/signin';
+@import 'page/signup';

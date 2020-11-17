@@ -1,0 +1,24 @@
+.signin_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40rem;
+    font-size: 1.5rem;
+    transform: translate(-50%, -50%);
+    background-color: deepskyblue;
+    text-align: center;
+}
+.signin_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.labels {
+    display: block;
+    align-self: left;
+}
+
+.inputs {
+    margin: 1rem 0 3rem 0;
+}
