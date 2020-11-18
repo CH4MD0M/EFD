@@ -1,17 +1,23 @@
-new Swiper(".swiper1", {
-  loop: true,
-  autoplay: true,
-  speed: 1500,
+import { elements } from './view/base';
+import { renderNavBar } from './view/nav';
 
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-  },
+//  navigation bar render
+renderNavBar(elements.navBar);
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+new Swiper('.swiper1', {
+    loop: true,
+    autoplay: true,
+    speed: 1500,
+
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
 
 /* new Swiper(".swiper2", {
