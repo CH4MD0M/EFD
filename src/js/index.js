@@ -1,8 +1,10 @@
 import { elements } from './view/base';
 import { renderNavBar } from './view/nav';
+import { renderFooter } from './view/footer';
 
 //  navigation bar render
 renderNavBar(elements.navBar);
+renderFooter(elements.footer);
 
 new Swiper('.swiper1', {
     loop: true,

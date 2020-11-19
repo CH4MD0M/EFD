@@ -1,41 +1,54 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
 }
 
 body {
-  margin: 0 1rem;
-  color: $color-grey-dark-2;
-  font-weight: 300;
-  line-height: 1.6;
-  font-family: "Noto Sans KR", sans-serif;
+    margin: 0 1rem;
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
+// GRID 설정
 .container {
-  display: grid;
-
-  grid-template-rows: 11rem 60vh min-content 40vw min-content 20rem;
-  grid-template-columns:
-    [full-start] 1fr
-    [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
-    [center-end] 1fr
-    [full-end];
+    display: grid;
+    grid-template-rows: 11rem 60vh min-content 40vw min-content 20rem;
+    grid-template-columns:
+        [full-start] 1fr
+        [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
+        [center-end] 1fr
+        [full-end];
+}
+.post {
+    display: grid;
+    grid-template-rows: 11rem 60vh repeat(3, 20vh) 20rem;
+    grid-template-columns:
+        [full-start] 1fr[side-start] 20vw [side-end center-start]
+        repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
+        [center-end] 1fr
+        [full-end];
+}
+.signinContainer {
+    display: grid;
+    grid-template-rows: 11rem 80vh 20rem;
+    grid-template-columns:
+        [full-start] 1fr
+        [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
+        [center-end] 1fr
+        [full-end];
 }
 
-.signinContainer {
-  display: grid;
-  grid-template-rows: 11rem 80vh 20rem;
-  grid-template-columns:
-    [full-start] 1fr
-    [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
-    [center-end] 1fr
-    [full-end];
+// SCROLL-BAR 삭제
+::-webkit-scrollbar {
+    width: 0;
 }

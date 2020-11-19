@@ -1,5 +1,5 @@
 export const renderNavBar = parent => {
-    const render = `
+    const navRender = `
     <div class="navigation__logo"><span>EFD</span>korea</div>
     <nav class="navigation__nav">
         <ul class="nav">
@@ -15,7 +15,7 @@ export const renderNavBar = parent => {
 
             <!-- 교육안내 -->
             <li class="nav__item">
-                <a href="./info.html" class="nav__link">
+                <a href="info.html" class="nav__link">
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
                     </svg>
@@ -45,7 +45,7 @@ export const renderNavBar = parent => {
 
             <!-- 교육자료소개 -->
             <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="intro.html" class="nav__link">
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
                     </svg>
@@ -73,7 +73,7 @@ export const renderNavBar = parent => {
 
             <!-- 고객지원 -->
             <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="customer.html" class="nav__link">
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
                     </svg>
@@ -112,5 +112,5 @@ export const renderNavBar = parent => {
             </li>
         </ul>
     </nav>`;
-    parent.insertAdjacentHTML('afterbegin', render);
+    parent.insertAdjacentHTML('afterbegin', navRender);
 };
