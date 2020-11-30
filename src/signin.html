@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-            rel="stylesheet"
-        />
-        <title>로그인</title>
-    </head>
-    <body class="signinContainer">
-        <script src="js/bundle.js"></script>
-        <!-- NAVIGATION BAR -->
-        <div class="navigation" id="navBar"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>로그인</title>
+  </head>
+  <body class="signinContainer grid">
+    <div class="header_nav"></div>
 
-        <!-- LOGIN SECTION -->
-        <section class="signin">
-            <div class="signin__boxes">
-                <h1 class="signin__title">EFD korea 로그인</h1>
+    <!-- NAVIGATION BAR -->
+    <div class="navigation" id="navBar"></div>
 
-                <form method="POST" action="./php/login.php" class="signin__box">
-                    <div class="signin__box--id int-area">
-                        <input type="text" name="id" id="id" autocomplete="off" required />
-                        <label for="id">아이디</label>
-                    </div>
+    <!-- LOGIN SECTION -->
+    <section class="signin">
+      <div class="signin__boxes">
+        <h1 class="signin__title">EFD korea 로그인</h1>
 
-                    <div class="signin__box--pw int-area">
-                        <input type="password" name="pw" id="pw" autocomplete="off" required />
-                        <label for="pw">비밀번호</label>
-                    </div>
-                    <div class="signin__box--btn">
-                        <button type="submit">로그인</button>
-                    </div>
-                </form>
-                <div class="signin__caption">
-                    <a href="signup.html">회원가입</a>
-                    <a href="#">아이디/비밀번호 찾기</a>
-                </div>
-            </div>
-        </section>
+        <form method="POST" action="./php/login.php" class="signin__box">
+          <div class="signin__box--id int-area">
+            <input type="text" name="id" id="id" autocomplete="off" required />
+            <label for="id">아이디</label>
+          </div>
 
-        <!-- FOOTER -->
-        <footer class="footer" id="footer"></footer>
-    </body>
+          <div class="signin__box--pw int-area">
+            <input
+              type="password"
+              name="pw"
+              id="pw"
+              autocomplete="off"
+              required
+            />
+            <label for="pw">비밀번호</label>
+          </div>
+          <div class="signin__box--btn">
+            <button type="submit">로그인</button>
+          </div>
+        </form>
+        <div class="signin__caption">
+          <a href="signup.html">회원가입</a>
+          <a href="#">아이디/비밀번호 찾기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer"></footer>
+  </body>
 </html>

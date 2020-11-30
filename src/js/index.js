@@ -1,25 +1,30 @@
-import { elements } from './view/base';
-import { renderNavBar } from './view/nav';
-import { renderFooter } from './view/footer';
+import { elements } from "./view/base";
+import { renderNavBar } from "./view/nav";
+import { renderFooter } from "./view/footer";
+import { scrollTop } from "./view/button";
 
-//  navigation bar render
+// Navigation bar Render
 renderNavBar(elements.navBar);
 renderFooter(elements.footer);
 
-new Swiper('.swiper1', {
-    loop: true,
-    autoplay: true,
-    speed: 1500,
+// Scrolltop Button
+scrollTop(elements.scrollBtn, 300);
 
-    pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-    },
+// Swiper slide
+new Swiper(".swiper1", {
+  loop: true,
+  autoplay: true,
+  speed: 1500,
 
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 /* new Swiper(".swiper2", {

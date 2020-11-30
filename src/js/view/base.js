@@ -1,4 +1,5 @@
 export const elements = {
-    navBar: document.getElementById('navBar'),
-    footer: document.getElementById('footer'),
+  scrollBtn: document.getElementById("scroll-btn"),
+  navBar: document.getElementById("navBar"),
+  footer: document.getElementById("footer"),
 };

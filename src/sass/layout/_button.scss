@@ -1,0 +1,19 @@
+.scroll-top {
+  position: fixed;
+  right: 4rem;
+  bottom: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__icon {
+    fill: $color-secondary-dark-1;
+    width: 6rem;
+    z-index: 10000000;
+    transition: 0.3s;
+  }
+
+  &__icon:hover {
+    transform: scale(1.2);
+  }
+}
