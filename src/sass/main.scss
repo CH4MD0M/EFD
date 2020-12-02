@@ -1,16 +1,17 @@
-@import "base/variable";
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
+@import 'base/variable';
+@import 'base/base';
+@import 'base/animations';
+@import 'base/typography';
 
-@import "layout/navbar";
-@import "layout/header";
-@import "layout/footer";
-@import "layout/post";
-@import "layout/button";
+@import 'layout/navbar';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/post';
+@import 'layout/button';
 
-@import "page/homes";
-@import "page/preview";
-@import "page/content";
-@import "page/signin";
-@import "page/signup";
+@import 'page/home';
+@import 'page/info';
+@import 'page/intro';
+@import 'page/customer';
+@import 'page/signin';
+@import 'page/signup';

@@ -1,19 +1,46 @@
 .scroll-top {
-  position: fixed;
-  right: 4rem;
-  bottom: 2rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+    position: fixed;
+    right: 4rem;
+    bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
 
-  &__icon {
-    fill: $color-secondary-dark-1;
-    width: 6rem;
-    z-index: 10000000;
-    transition: 0.3s;
-  }
+    &__icon {
+        fill: $color-secondary-dark-1;
+        width: 6rem;
+        z-index: 10000000;
+        transition: 0.3s;
+    }
 
-  &__icon:hover {
-    transform: scale(1.2);
-  }
+    &__icon:hover {
+        transform: scale(1.2);
+    }
+}
+
+// BUTTON STYLING
+.btn {
+    &,
+/* 아직 방문하지 않은 <a> 요소를 선택 */
+&:link,
+  /* 방문한 <a> 요소를 선택 */
+  &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        position: relative;
+        display: inline-block; /* 문자로 취급. 위에서 text-align: center; 적용하여 정렬. */
+        border: 1px solid $color-white;
+        border-radius: 10rem;
+        font-size: $default-font-size;
+        color: aliceblue;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: $shadow;
+    }
 }

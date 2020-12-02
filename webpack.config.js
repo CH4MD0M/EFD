@@ -66,8 +66,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/signup.html',
             filename: 'signup.html',
-        }),
-        new HtmlWebpackPlugin({
             template: 'src/info.html',
             filename: 'info.html',
         }),
