@@ -1,20 +1,26 @@
 .post {
-    &--header {
-        grid-column: full-start/full-end;
+    &__header {
+        grid-column: side-end / full-end;
+        margin-top: 2rem;
+        background-image: url('../img/banner.png');
+        background-size: cover;
+        transform: scaleX(-1);
     }
-    &--section {
-        grid-column: full-start/full-end;
+    &__content {
+        grid-column: side-end / center-end;
+    }
+
+    &__section {
+        font-size: 3rem;
+        padding: 10rem 2rem;
     }
 }
-.section {
-    &-1 {
-    }
-    &-2 {
-        background-color: $color-grey-light-2;
-    }
-    &-3 {
-    }
-    &-4 {
-        background-color: $color-grey-light-2;
-    }
+
+.sidemenu {
+    grid-column: side-start / side-end;
+    margin: 8rem 0;
+    width: 90%;
+    height: 40rem;
+    border-radius: 10px;
+    background-color: $color-grey-light-2;
 }

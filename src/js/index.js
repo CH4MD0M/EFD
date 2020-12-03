@@ -1,31 +1,11 @@
 import { elements } from './views/base';
-import { renderNavBar } from './views/nav';
-import { renderFooter } from './views/footer';
-import { scrollTop } from './views/button';
+import { renderNavBar, renderFooter, renderBtn } from './views/render.js';
+import { swiper } from './views/swiper.js';
 
-// Navigation bar Render
+// Render
 renderNavBar(elements.navBar);
 renderFooter(elements.footer);
-
-// Scrolltop Button
-scrollTop(elements.scrollBtn, 300);
-
-// Swiper slide
-new Swiper('.swiper1', {
-    loop: true,
-    autoplay: true,
-    speed: 1500,
-
-    pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-    },
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
+renderBtn(elements.body);
 
 /* new Swiper(".swiper2", {
   effect: "coverflow",

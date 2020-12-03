@@ -35,7 +35,7 @@ body {
 }
 .post {
     display: grid;
-    grid-template-rows: 7rem 11rem 40vh 40vh 20rem;
+    grid-template-rows: 7rem 11rem 40vh min-content 20rem;
     grid-template-columns:
         [full-start] 1fr [side-start] 15vw [side-end center-start]
         repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
