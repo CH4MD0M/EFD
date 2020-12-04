@@ -1,11 +1,11 @@
 import { elements } from './views/base';
-import { renderNavBar, renderFooter, renderBtn } from './views/render.js';
+import { renderNavBar, renderFooter } from './views/render.js';
+import { scrollTop } from './views/button.js';
 import { swiper } from './views/swiper.js';
 
 // Render
 renderNavBar(elements.navBar);
 renderFooter(elements.footer);
-renderBtn(elements.body);
 
 /* new Swiper(".swiper2", {
   effect: "coverflow",

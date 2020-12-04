@@ -21,6 +21,11 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+ul,
+li {
+    list-style: none;
+}
+
 // GRID 설정
 .grid {
     grid-template-columns:

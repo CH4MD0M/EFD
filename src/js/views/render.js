@@ -142,14 +142,3 @@ export const renderFooter = parent => {
     </p>`;
     parent.insertAdjacentHTML('afterbegin', ftrRender);
 };
-
-// SCROLL-BUTTON
-export const renderBtn = parent => {
-    const scrollBtn = ` 
-<button class="scroll-top" id="scroll-btn">
-    <svg class="scroll-top__icon">
-        <use xlink:href="img/sprite.svg#icon-circle-up"></use>
-    </svg>
-</button>`;
-    parent.insertAdjacentHTML('afterbegin', scrollBtn);
-};
