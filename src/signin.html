@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <title>로그인</title>
-  </head>
-  <body class="signinContainer grid">
-    <div class="header_nav"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <title>로그인</title>
+    </head>
+    <body class="signinContainer grid">
+        <div class="header_nav"></div>
 
-    <!-- NAVIGATION BAR -->
-    <div class="navigation" id="navBar"></div>
+        <!-- NAVIGATION BAR -->
+        <div class="navigation" id="navBar"></div>
 
-    <!-- LOGIN SECTION -->
-    <section class="signin">
-      <div class="signin__boxes">
-        <h1 class="signin__title">EFD korea 로그인</h1>
+        <!-- LOGIN SECTION -->
+        <section class="signin">
+            <div class="forms-container">
+                <form action="" class="sign-in-form">
+                    <h1 class="title">Sign in</h1>
+                    <div class="input-field">
+                        <svg class="signin-icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg>
+                        <input type="text" placeholder="아이디" />
+                    </div>
+                    <div class="input-field">
+                        <svg class="signin-icon">
+                            <use xlink:href="img/sprite.svg#icon-lock"></use>
+                        </svg>
+                        <input type="password" placeholder="패스워드" />
+                    </div>
+                    <input type="submit" value="Login" class="login-btn" />
+                    <p class="social-text">Or Sign in with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <svg class="facebook">
+                                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="google">
+                                <use xlink:href="img/sprite.svg#icon-google"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="twitter">
+                                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="linkedin">
+                                <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-        <form method="POST" action="./php/login.php" class="signin__box">
-          <div class="signin__box--id int-area">
-            <input type="text" name="id" id="id" autocomplete="off" required />
-            <label for="id">아이디</label>
-          </div>
-
-          <div class="signin__box--pw int-area">
-            <input
-              type="password"
-              name="pw"
-              id="pw"
-              autocomplete="off"
-              required
-            />
-            <label for="pw">비밀번호</label>
-          </div>
-          <div class="signin__box--btn">
-            <button type="submit">로그인</button>
-          </div>
-        </form>
-        <div class="signin__caption">
-          <a href="signup.html">회원가입</a>
-          <a href="#">아이디/비밀번호 찾기</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer" id="footer"></footer>
-  </body>
+        <!-- FOOTER -->
+        <footer class="footer" id="footer"></footer>
+    </body>
 </html>
