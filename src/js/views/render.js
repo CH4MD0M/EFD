@@ -140,5 +140,7 @@ export const renderFooter = parent => {
         &copy; Copyright 2020 by ch4md0m <br />Lorem ipsum dolor sit amet consectetur
         adipisicing elit. Voluptates, libero nobis.
     </p>`;
-    parent.insertAdjacentHTML('afterbegin', ftrRender);
+    if (parent) {
+        parent.insertAdjacentHTML('afterbegin', ftrRender);
+    }
 };

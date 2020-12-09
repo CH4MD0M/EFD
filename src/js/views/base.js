@@ -5,5 +5,5 @@ export const elements = {
     footer: document.getElementById('footer'),
     sign_in_btn: document.querySelector('#sign-in-btn'),
     sign_up_btn: document.querySelector('#sign-up-btn'),
-    container: document.querySelector('.signin-up'),
+    container: document.querySelector('.signin-up-container'),
 };

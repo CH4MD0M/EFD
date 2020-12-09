@@ -1,3 +1,28 @@
+// BUTTON BASE STYLING
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        position: relative;
+        display: inline-block; /* 문자로 취급. 위에서 text-align: center; 적용하여 정렬. */
+        border: 1px solid $color-white;
+        border-radius: 10rem;
+        font-size: $default-font-size;
+        color: aliceblue;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: $shadow;
+    }
+}
+
+// BACK TO TOP BUTTON
 .scroll-top {
     position: fixed;
     right: 4rem;
@@ -27,28 +52,32 @@
     bottom: 7rem;
 }
 
-// BUTTON STYLING
-.btn {
-    &,
-/* 아직 방문하지 않은 <a> 요소를 선택 */
-&:link,
-  /* 방문한 <a> 요소를 선택 */
-  &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1.5rem 4rem;
-        position: relative;
-        display: inline-block; /* 문자로 취급. 위에서 text-align: center; 적용하여 정렬. */
-        border: 1px solid $color-white;
-        border-radius: 10rem;
-        font-size: $default-font-size;
-        color: aliceblue;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+// SIGN IN / SIGN UP BUTTON
+.sign-in-btn,
+.sign-up-btn,
+.sign-in-up-info-btn {
+    width: 15rem;
+    height: 5rem;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
 
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: $shadow;
-    }
+.sign-in-up-info-btn {
+    margin: 0;
+    background: none;
+    border: 3px solid $color-white;
+    width: 13rem;
+    height: 4rem;
+    color: $color-white;
+}
+
+.sign-in-btn:hover,
+.sign-up-btn:hover {
+    background-color: #4d84e2;
 }
