@@ -2,6 +2,7 @@ import { elements } from './views/base';
 import { renderNavBar, renderFooter } from './views/render.js';
 import { scrollTop } from './views/button.js';
 import { swiper } from './views/swiper.js';
+import './models/signin-up.js';
 
 // Render
 renderNavBar(elements.navBar);
