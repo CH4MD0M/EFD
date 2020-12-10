@@ -83,11 +83,11 @@ export const renderNavBar = parent => {
 
                 <ul class="dropdown">
                     <li class="dropdown__item">
-                        <a href="#" class="dropdown__link"> <span>공지사항</span></a>
+                        <a href="#" class="dropdown__link"> <span>자주묻는 질문</span></a>
                     </li>
 
                     <li class="dropdown__item">
-                        <a href="#" class="dropdown__link"> <span>Q&A</span></a>
+                        <a href="#" class="dropdown__link"> <span>공지사항</span></a>
                     </li>
                 </ul>
             </li>

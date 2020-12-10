@@ -1,4 +1,10 @@
 .sidemenu {
+    grid-column: side-start / side-end;
+    margin: 8rem 0;
+    width: 90%;
+    height: 40rem;
+    border-radius: 10px;
+    background-color: $color-grey-light-2;
     > ul {
         margin-top: 5rem;
         > li {
