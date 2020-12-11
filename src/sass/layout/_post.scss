@@ -17,37 +17,59 @@
 }
 
 /* 공통 */
-.fl {
-    float: left;
-}
-.tc {
-    text-align: center;
-}
 
 /* 게시판 목록 */
-#board_area {
-    width: 900px;
-    position: relative;
+.customer__main {
+    margin: 4rem 0 20rem 0;
+    width: 100%;
 }
-.list-table {
-    margin-top: 40px;
+
+.board__title {
+    font-size: 4rem;
+    margin-left: 2rem;
 }
-.list-table thead th {
-    height: 40px;
-    border-top: 2px solid #09c;
-    border-bottom: 1px solid #ccc;
-    font-weight: bold;
-    font-size: 17px;
+
+.table {
+    margin-top: 4rem;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 5rem repeat(auto, 4rem);
+
+    & a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    & th,
+    & td {
+        padding: 1rem;
+    }
+
+    & tr {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 10rem 1fr repeat(3, 10rem);
+        text-align: center;
+    }
+
+    &__head {
+        & th {
+            margin: 0 0.4rem;
+            border-top: 2px solid #09c;
+            border-bottom: 1px solid #ccc;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__body {
+        & td {
+            margin: 0 0.4rem;
+            border-bottom: 1px solid #ccc;
+            font-size: 1.4rem;
+        }
+    }
 }
-.list-table tbody td {
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-    height: 20px;
-    font-size: 14px;
-}
+
 #write_btn {
-    position: absolute;
-    margin-top: 20px;
-    right: 0;
+    margin-top: 2rem;
 }

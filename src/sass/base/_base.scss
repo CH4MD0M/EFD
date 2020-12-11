@@ -38,6 +38,7 @@ li {
 .container {
     grid-template-rows: 7rem 11rem 60vh min-content 40vw min-content 20rem;
 }
+
 .post {
     grid-template-rows: 7rem 11rem 40vh min-content 20rem;
     grid-template-columns:
@@ -46,6 +47,7 @@ li {
         [center-end] 1fr
         [full-end];
 }
+
 .signinContainer {
     grid-template-rows: 7rem 11rem 80vh;
 }
