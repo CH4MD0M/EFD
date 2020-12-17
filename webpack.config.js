@@ -55,7 +55,7 @@ module.exports = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({
+        /*  new HtmlWebpackPlugin({
             template: 'src/index.html',
             filename: 'index.html',
         }),
@@ -74,7 +74,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/customer.html',
             filename: 'customer.html',
-        }),
+        }), */
 
         // 컴파일 + 번들링 CSS 파일이 저장될 경로와 이름 지정
         new MiniCssExtractPlugin({
@@ -89,7 +89,7 @@ module.exports = {
         }),
 
         new CopyWebpackPlugin({
-            patterns: [{ from: './src/php', to: './php' }],
+            patterns: [{ context: './src/', from: '**/*.php', to: './' }],
             options: {
                 concurrency: 100,
             },

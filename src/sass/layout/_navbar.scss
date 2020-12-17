@@ -119,6 +119,9 @@
         }
     }
 }
+.home_active .nav__link:hover > .home__icon {
+    fill: #e9212e;
+}
 
 // ANIMATION
 .nav__link:hover > .nav__icon {

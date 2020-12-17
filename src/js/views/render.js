@@ -5,8 +5,8 @@ export const renderNavBar = parent => {
     <nav class="navigation__nav">
         <ul class="nav">
             <!-- Home -->
-            <li class="nav__item active">
-                <a href="index.html" class="nav__link">
+            <li class="nav__item home_active">
+                <a href="index.php" class="nav__link">
                     <svg class="home__icon">
                         <use xlink:href="img/sprite.svg#icon-home"></use>
                     </svg>
@@ -16,7 +16,7 @@ export const renderNavBar = parent => {
 
             <!-- 교육안내 -->
             <li class="nav__item">
-                <a href="info.html" class="nav__link">
+                <a href="info.php" class="nav__link">
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
                     </svg>
@@ -46,7 +46,7 @@ export const renderNavBar = parent => {
 
             <!-- 교육자료소개 -->
             <li class="nav__item">
-                <a href="intro.html" class="nav__link">
+                <a href="intro.php" class="nav__link">
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
                     </svg>
@@ -74,7 +74,7 @@ export const renderNavBar = parent => {
 
             <!-- 고객지원 -->
             <li class="nav__item">
-                <a href="customer.html" class="nav__link">
+                <a href="customer.php" class="nav__link">
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
                     </svg>
@@ -87,7 +87,7 @@ export const renderNavBar = parent => {
                     </li>
 
                     <li class="dropdown__item">
-                        <a href="#" class="dropdown__link"> <span>공지사항</span></a>
+                        <a href="board.php" class="dropdown__link"> <span>공지사항</span></a>
                     </li>
                 </ul>
             </li>
@@ -104,7 +104,7 @@ export const renderNavBar = parent => {
 
             <!-- 로그인 -->
             <li class="nav__item">
-                <a href="signin.html" class="nav__link">
+                <a href="login.php" class="nav__link">
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
                     </svg>

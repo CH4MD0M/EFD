@@ -32,7 +32,8 @@
         margin-bottom: 4rem;
 
         & > img {
-            width: 13rem;
+            width: 22rem;
+            height: 22rem;
         }
     }
 
@@ -167,7 +168,7 @@
             background-image: linear-gradient(
                 to right bottom,
                 rgba($color-secondary, 0.85),
-                rgba($color-secondary, 0.85)
+                rgba($color-secondary-dark-1, 0.85)
             );
         }
         &--3 {
