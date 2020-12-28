@@ -16,6 +16,13 @@
         <!-- NAVIGATION BAR -->
         <div class="navigation" id="navBar"></div>
 
+        <img class="wave" src="img/wave.png">
+        <div class="lognin-container">
+            <div class="login-image">
+                <img src="img/login.svg">
+            </div>
+        </div>
+
         <footer class="footer" id="footer"></footer>
         <script src="js/bundle.js"></script>
       
