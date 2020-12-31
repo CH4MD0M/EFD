@@ -1,4 +1,4 @@
-import { elements } from '../views/base';
+/* import { elements } from '../views/base';
 const btnElement = [elements.sign_in_btn, elements.sign_up_btn];
 
 btnElement.map(function (el) {
@@ -8,3 +8,4 @@ btnElement.map(function (el) {
         });
     }
 });
+ */

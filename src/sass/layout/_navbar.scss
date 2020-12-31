@@ -131,3 +131,8 @@
 .nav__item:hover > .dropdown {
     display: inline-block;
 }
+
+.header_nav {
+    background-color: $color-white;
+    grid-column: full-start / full-end;
+}

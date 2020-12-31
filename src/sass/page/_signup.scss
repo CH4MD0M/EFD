@@ -1,0 +1,22 @@
+.wave2 {
+    position: fixed;
+    height: 100%;
+    right: -1%;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+// ANIMATION
+.wave2 {
+    animation: moveInRight 1s forwards;
+}
+
+.signUp {
+    &-form {
+        animation: moveInLeft 1s forwards 0.7s;
+    }
+    &-img {
+        animation: moveInRight 1s forwards 0.2s;
+    }
+}

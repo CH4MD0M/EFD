@@ -104,7 +104,7 @@ export const renderNavBar = parent => {
 
             <!-- 로그인 -->
             <li class="nav__item">
-                <a href="login.php" class="nav__link">
+                <a href="signin.php" class="nav__link">
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
                     </svg>
