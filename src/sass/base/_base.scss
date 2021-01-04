@@ -48,8 +48,10 @@ li {
         [full-end];
 }
 
-.signinContainer {
+.signInContainer,
+.signUpContainer {
     grid-template-rows: 7rem 11rem 80vh;
+    overflow-x: hidden;
 }
 
 // SCROLL-BAR 삭제

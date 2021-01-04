@@ -1,3 +1,4 @@
 node_modules
 db_connction.php
 dist/*
+src/config/constants.php

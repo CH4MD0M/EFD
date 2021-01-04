@@ -7,6 +7,27 @@
     z-index: -1;
 }
 
+.alert {
+    padding: 2rem 0;
+    background-color: lightcoral;
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 25px;
+
+    & li {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        text-align: left;
+    }
+
+    & li::before {
+        padding-right: 1rem;
+        text-align: right;
+        content: '✔';
+    }
+}
+
 // ANIMATION
 .wave2 {
     animation: moveInRight 1s forwards;
@@ -18,5 +39,40 @@
     }
     &-img {
         animation: moveInRight 1s forwards 0.2s;
+    }
+}
+
+// EVENT
+.signUp-form__input:before,
+.signUp-form__input:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: $color-primary-dark-1;
+    transition: 0.4s;
+}
+
+.signUp-form__input:before {
+    right: 50%;
+}
+
+.signUp-form__input:after {
+    left: 50%;
+}
+
+.signUp-form__input.focus:before,
+.signUp-form__input.focus:after {
+    width: 50%;
+}
+
+.signUp-form__input.focus {
+    & > .input__box > h5 {
+        top: -5px;
+        font-size: 15px;
+    }
+    & > .input__icon {
+        fill: $color-primary-dark-1;
     }
 }

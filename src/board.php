@@ -1,5 +1,5 @@
 <?php
-    require_once("db_connction.php")
+    require_once 'config/db_conn.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,16 +46,14 @@
                 </thead>
                 <?php
                     $sql = mq("SELECT * FROM board ORDER BY board_index DESC LIMIT 0,5"); 
-                    while($board = $sql->fetch_array())
-                    {
+                    while($board = $sql->fetch_array()){
                         // title변수에 DB에서 가져온 title을 선택
                         $title = $board["board_title"]; 
-                        if(strlen($title)>30)
-                        { 
+                        if(strlen($title)>30){ 
                             // title이 30을 넘어서면 ...표시
-                            $title = str_replace($board["board_title"],mb_substr($board["board_title"],0,30,"utf-8")."...",$board["board_title"]);
+                            $title = str_replace($board["board_title"], mb_substr($board["board_title"],0,30,"utf-8")."...",$board["board_title"]);
                         }
-                            ?>
+                ?>
                         <tbody class="table__body">
                             <tr>
                                 <td><?php echo $board['board_index']; ?></td>
@@ -65,8 +63,7 @@
                                 <td><?php echo $board['hit']; ?></td>
                             </tr>
                         </tbody>
-                    <?php } 
-                ?>
+              <?php } ?>
             </table>
             <div id="write_btn">
                 <a href="#"><button>글쓰기</button></a>
@@ -76,6 +73,6 @@
 
         <!-- FOOTER -->
         <footer class="footer" id="footer"></footer>
-        <script def src="js/bundle.js"></script>
+        <script src="js/bundle.js"></script>
     </body>
 </html>

@@ -1,3 +1,5 @@
+<?php require_once 'controllers/authController.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,7 +12,7 @@
         <link rel="stylesheet" href="css/style.css"/>
         <title>로그인</title>    
     </head>
-    <body class="signinContainer grid">
+    <body class="signUpContainer grid">
         <div class="header_nav"></div>
 
         <!-- NAVIGATION BAR -->
@@ -20,9 +22,18 @@
         <section class="sign-in-up-container">
             <div class="signIn-container">
                 <div class="signUp-content">
-                    <form class="signUp-form" action="login.php">
+                    <form class="signUp-form" action="signup.php" method="post">
                         <img class="signUp-form__img" src="img/avatar.svg">
                         <h2 class="signUp-form__title">회원가입</h2>
+                        <!-- 경고 메시지 -->
+                        <?php if(count($errors) > 0): ?>
+                            <div class="alert">
+                                <?php foreach($errors as $error): ?>
+                                    <li><?php echo $error; ?></li>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+
                         <!-- 아이디 입력 -->
                         <div class="signUp-form__input">
                             <div class="input__icon">
@@ -32,31 +43,7 @@
                             </div>                 
                             <div class="input__box">
                                     <h5>아이디</h5>
-                                    <input type="text" class="inputs">
-                            </div>
-                        </div>
-                        <!-- 패스워드 입력 -->
-                        <div class="signUp-form__input">
-                            <div class="input__icon">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#icon-lock"></use>
-                                </svg>
-                            </div>
-                            <div class="input__box">
-                                <h5>비밀번호</h5>
-                                <input type="password" class="inputs">
-                            </div>
-                        </div>
-                        <!-- 패스워드 입력 확인 -->
-                        <div class="signUp-form__input">
-                            <div class="input__icon">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#icon-lock"></use>
-                                </svg>
-                            </div>
-                            <div class="input__box">
-                                <h5>비밀번호 확인</h5>
-                                <input type="password" class="inputs">
+                                    <input type="text" class="inputs" name="username" value="<?php echo $username; ?>">
                             </div>
                         </div>
                         <!-- 이메일 -->
@@ -68,13 +55,37 @@
                             </div>
                             <div class="input__box">
                                 <h5>이메일</h5>
-                                <input type="email" class="inputs">
+                                <input type="email" class="inputs" name="email" value="<?php echo $email; ?>">
+                            </div>
+                        </div>
+                        <!-- 패스워드 입력 -->
+                        <div class="signUp-form__input">
+                            <div class="input__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-lock"></use>
+                                </svg>
+                            </div>
+                            <div class="input__box">
+                                <h5>비밀번호</h5>
+                                <input type="password" class="inputs" name="password">
+                            </div>
+                        </div>
+                        <!-- 패스워드 입력 확인 -->
+                        <div class="signUp-form__input">
+                            <div class="input__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-lock"></use>
+                                </svg>
+                            </div>
+                            <div class="input__box">
+                                <h5>비밀번호 확인</h5>
+                                <input type="password" class="inputs" name="passwordConf">
                             </div>
                         </div>
 
                         <!-- 회원가입 버튼 -->
                         <div class="btn-container">
-                            <input type="submit" class="signUp-btn" value="회원가입">
+                            <input type="submit" class="signUp-btn" value="회원가입" name="signup-btn">
                         </div>
                     </form>
                 </div>

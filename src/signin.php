@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/style.css"/>
         <title>로그인</title>    
     </head>
-    <body class="signinContainer grid">
+    <body class="signInContainer grid">
         <div class="header_nav"></div>
 
         <!-- NAVIGATION BAR -->
