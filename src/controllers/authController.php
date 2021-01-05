@@ -42,26 +42,32 @@ if (isset($_POST['signup-btn'])){
         $errors['email'] = "이메일이 이미 존재합니다.";
     }
 
-    if (count($errors) === 0){
+    if (count($errors) == 0){
         $password = password_hash($password, PASSWORD_DEFAULT);
         $token = bin2hex(random_bytes(50));
-        $verified = false;
+        $verified = False;
 
+        // $sql = "INSERT INTO members (username, email, verified, token, password) VALUES ('$username', '$email', '$verified', '$token', '$password')";
+        // $result = mysqli_query($conn, $sql);
         $sql = "INSERT INTO members (username, email, verified, token, password) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param('ssbss', $username, $email, $verified, $token, $password);
-        
-        if($stmt->execute()) {
+
+        if($stmt->execute()){
             $user_id = $conn->insert_id;
             $_SESSION['id'] = $user_id;
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
             $_SESSION['verified'] = $verified;
 
+            echo("<script>alert('회원가입이 완료되었습니다.');</script>");
             header('location: index.php');
             exit();
-        }else{
-            $errors['db_error'] = "Database error: failed to register";
+
+        } else{
+            $errors['db_error'] = 'Database error: failed to register';
         }
+
+       
     }
 }
