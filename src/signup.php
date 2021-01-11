@@ -10,13 +10,13 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="css/style.css"/>
-        <title>로그인</title>    
+        <title>회원가입</title>    
     </head>
     <body class="signUpContainer grid">
         <div class="header_nav"></div>
 
         <!-- NAVIGATION BAR -->
-        <div class="navigation" id="navBar"></div>
+        <?php include 'include/nav_bar.php'?>
 
         <!-- LOGIN SECTION -->
         <section class="sign-in-up-container">

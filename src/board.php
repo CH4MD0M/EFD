@@ -18,7 +18,7 @@
         <div class="header_nav"></div>
 
         <!-- NAVIGATION BAR -->
-        <div class="navigation" id="navBar"></div>
+        <?php include 'include/nav_bar.php'?>
 
         <!-- SIDE MENU -->
         <div class="sidemenu">

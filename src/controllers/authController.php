@@ -45,13 +45,11 @@ if (isset($_POST['signup-btn'])){
     if (count($errors) == 0){
         $password = password_hash($password, PASSWORD_DEFAULT);
         $token = bin2hex(random_bytes(50));
-        $verified = False;
+        $verified = intval(false);
 
-        // $sql = "INSERT INTO members (username, email, verified, token, password) VALUES ('$username', '$email', '$verified', '$token', '$password')";
-        // $result = mysqli_query($conn, $sql);
         $sql = "INSERT INTO members (username, email, verified, token, password) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param('ssbss', $username, $email, $verified, $token, $password);
+        $stmt->bind_param('ssiss', $username, $email, $verified, $token, $password);
 
         if($stmt->execute()){
             $user_id = $conn->insert_id;
@@ -60,7 +58,7 @@ if (isset($_POST['signup-btn'])){
             $_SESSION['email'] = $email;
             $_SESSION['verified'] = $verified;
 
-            echo("<script>alert('회원가입이 완료되었습니다.');</script>");
+            echo('<script>alert("회원가입이 완료되었습니다.");</script>');
             header('location: index.php');
             exit();
 
@@ -70,4 +68,46 @@ if (isset($_POST['signup-btn'])){
 
        
     }
+}
+
+// /////////////////////////////
+// 로그인 버튼을 클릭했을 때
+if (isset($_POST['signin-btn'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if (empty($username)){
+        $errors['username'] = "닉네임을 입력하세요.";
+    }
+    if (empty($password)){
+        $errors['password'] = "비밀번호를 입력하세요.";
+    } 
+
+
+    if (count($errors) == 0){
+        $sql = "SELECT * FROM members WHERE email=? OR username=? LIMIT 1";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('ss', $username, $username);
+        $stmt->execute();
+    
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
+    
+        if(password_verify($password, $user['password'])){
+            // 로그인 성공
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['verified'] = $user['verified'];
+    
+            echo('<script>alert("로그인 되었습니다.");</script>');
+            header('location: index.php');
+            exit();
+    
+        } else{
+            $errors['login_fail'] = "로그인 실패";
+        }
+
+    }
+
 }

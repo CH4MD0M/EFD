@@ -1,3 +1,5 @@
+<?php require_once 'controllers/authController.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,7 +16,7 @@
         <div class="header_nav"></div>
 
         <!-- NAVIGATION BAR -->
-        <div class="navigation" id="navBar"></div>
+        <?php include 'include/nav_bar.php'?>
 
         <!-- LOGIN SECTION -->
         <section class="sign-in-up-container">
@@ -24,9 +26,18 @@
                     <img src="img/signin.svg">
                 </div>
                 <div class="signIn-content">
-                    <form class="signIn-form" action="login.php">
+                    <form class="signIn-form" action="signin.php" method="post">
                         <img class="signIn-form__img" src="img/avatar.svg">
                         <h2 class="signIn-form__title">로그인</h2>
+                        <!-- 경고 메시지 -->
+                        <?php if(count($errors) > 0): ?>
+                            <div class="alert">
+                                <?php foreach($errors as $error): ?>
+                                    <li><?php echo $error; ?></li>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+
                         <!-- 아이디 입력 -->
                         <div class="signIn-form__input">
                             <div class="input__icon">
@@ -36,7 +47,7 @@
                             </div>                 
                             <div class="input__box">
                                     <h5>아이디</h5>
-                                    <input type="text" class="inputs">
+                                    <input type="text" class="inputs" name="username" value="<?php echo $username; ?>">
                             </div>
                         </div>
                         <!-- 패스워드 입력 -->
@@ -48,13 +59,13 @@
                             </div>
                             <div class="input__box">
                                 <h5>비밀번호</h5>
-                                <input type="password" class="inputs">
+                                <input type="password" class="inputs" name="password">
                             </div>
                         </div>
 
                         <!-- 로그인 버튼 -->
                         <div class="btn-container">
-                            <input type="submit" class="signIn-btn" value="로그인">
+                            <input type="submit" class="signIn-btn" value="로그인" name="signin-btn">
                             <input type="submit" class="signIn-btn facebook" value="페이스북 계정으로 로그인">
                             <input type="submit" class="signIn-btn kakao" value="카카오 계정으로 로그인">
                             <input type="submit" class="signIn-btn naver" value="네이버 계정으로 로그인">    
