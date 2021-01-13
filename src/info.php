@@ -19,7 +19,8 @@
             </svg>
         </button>
 
-        <div class="header_nav"></div>
+        <!-- 상단 표시줄 -->
+        <?php include 'include/header_nav.php'?>
 
         <!-- NAVIGATION BAR -->
         <?php include 'include/nav_bar.php'?>

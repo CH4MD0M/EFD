@@ -1,3 +1,4 @@
+<?php require_once 'controllers/authController.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -112,12 +113,21 @@
 
                     <!-- 로그인 -->
                     <li class="nav__item">
-                        <a href="signin.php" class="nav__link">
-                            <svg class="nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
-                            </svg>
-                            <span>로그인</span>
-                        </a>
+                        <?php 
+                            if(isset($_SESSION['id'])){ ?>
+                                <a href="#" class="nav__link">
+                                    <span> <?php echo $_SESSION['username']; ?> 님  </span>
+                                </a>
+                        <?php
+                            } else{ ?>
+                                <a href="signin.php" class="nav__link">
+                                    <svg class="nav__icon">
+                                        <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
+                                    </svg>
+                                    <span> 로그인 </span>
+                                </a>
+                        <?php     
+                            }?>
                     </li>
                 </ul>
             </nav>

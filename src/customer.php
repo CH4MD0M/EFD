@@ -12,7 +12,8 @@
         <title>고객 지원</title>
     </head>
     <body class="post">
-        <div class="header_nav"></div>
+        <!-- 상단 표시줄 -->
+        <?php include 'include/header_nav.php'?>
 
         <!-- NAVIGATION BAR -->
         <?php include 'include/nav_bar.php'?>

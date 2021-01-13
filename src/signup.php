@@ -13,7 +13,8 @@
         <title>회원가입</title>    
     </head>
     <body class="signUpContainer grid">
-        <div class="header_nav"></div>
+        <!-- 상단 표시줄 -->
+        <?php include 'include/header_nav.php'?>
 
         <!-- NAVIGATION BAR -->
         <?php include 'include/nav_bar.php'?>

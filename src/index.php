@@ -16,9 +16,9 @@
         <title>EFDkorea</title>
     </head>
     <body class="container grid">
-        <?php if(!isset($_SESSION['verified'])): ?>
+        
         <!-- Modal -->
-        <div class="modal hidden">
+        <!-- <div class="modal hidden">
 		    <div class="modal__overlay"></div>
 		    <div class="modal__content">
                 <div class="modal__text">
@@ -26,12 +26,8 @@
 			    </div>
 			    <button class="modal-close-btn">닫기</button>
 		    </div>
-        </div>
-        <script>
-            const modal = document.querySelector('.modal');
-            modal.classList.remove('hidden');
-            </script>
-        <?php endif; ?>
+        </div> -->
+        
         <!-- Back TO Top -->
         <button class="scroll-top" id="scroll-btn">
             <svg class="scroll-top__icon">
@@ -40,7 +36,7 @@
         </button>
 
         <!-- 상단 표시줄 -->
-        <div class="header_nav"></div>
+        <?php include 'include/header_nav.php'?>
 
         <!-- NAVIGATION BAR -->
         <?php include 'include/nav_bar.php'?>

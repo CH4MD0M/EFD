@@ -1,11 +1,10 @@
 import { elements } from './views/base';
-import { renderNavBar, renderFooter } from './views/render.js';
+import { renderFooter } from './views/render.js';
 import { scrollTop } from './views/button.js';
 import { swiper } from './views/swiper.js';
 import './views/input.js';
 
 // Render
-renderNavBar(elements.navBar);
 renderFooter(elements.footer);
 
 /* new Swiper(".swiper2", {

@@ -1,6 +1,4 @@
-<?php
-    require_once 'config/db_conn.php';
-?>
+<?php require_once 'controllers/authController.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,7 +13,8 @@
         <title>고객 지원</title>
     </head>
     <body class="post">
-        <div class="header_nav"></div>
+        <!-- 상단 표시줄 -->
+        <?php include 'include/header_nav.php'?>
 
         <!-- NAVIGATION BAR -->
         <?php include 'include/nav_bar.php'?>
@@ -65,9 +64,16 @@
                         </tbody>
               <?php } ?>
             </table>
-            <div id="write_btn">
-                <a href="#"><button>글쓰기</button></a>
-            </div>
+            <?php 
+                if (!isset($_SESSION['username']) || !isset($_SESSION['id'])){ ?>
+            <?php
+                } else{ ?>
+                        <div id="write_btn">
+                            <a href="#"><button>글쓰기</button></a>
+                        </div>
+            <?php
+                }?>
+            
             
         </main>
 

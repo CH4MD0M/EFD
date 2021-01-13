@@ -111,3 +111,13 @@ if (isset($_POST['signin-btn'])){
     }
 
 }
+// 로그아웃 버트 클릭
+if(isset($_GET['logout'])){
+    session_destroy();
+    unset($_SESSION['id']);
+    unset($_SESSION['username']);
+    unset($_SESSION['email']);
+    unset($_SESSION['verified']);
+    header('location: signin.php');
+    exit();
+}
