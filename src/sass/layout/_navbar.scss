@@ -123,6 +123,16 @@
     fill: #e9212e;
 }
 
+// 로그인 후 사용자 이름
+.username {
+    pointer-events: none;
+
+    & > span {
+        font-size: 2.3rem;
+        color: $color-secondary;
+    }
+}
+
 // ANIMATION
 .nav__link:hover > .nav__icon {
     opacity: 1;
@@ -130,9 +140,4 @@
 
 .nav__item:hover > .dropdown {
     display: inline-block;
-}
-
-.header_nav {
-    background-color: $color-white;
-    grid-column: full-start / full-end;
 }

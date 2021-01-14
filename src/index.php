@@ -16,18 +16,32 @@
         <title>EFDkorea</title>
     </head>
     <body class="container grid">
-        
         <!-- Modal -->
-        <!-- <div class="modal hidden">
-		    <div class="modal__overlay"></div>
-		    <div class="modal__content">
-                <div class="modal__text">
-                    로그인을 위해서<br/> 회원가입한 이메일로 인증해주세요
-			    </div>
-			    <button class="modal-close-btn">닫기</button>
-		    </div>
-        </div> -->
-        
+        <?php if(isset($_SESSION['id']) && !$_SESSION['verified']) : ?>
+            <div class="modal hidden">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                    <div class="modal__text">
+                        로그인을 위해서<br/> 회원가입한 이메일로 인증해주세요
+                    </div>
+                    <button class="modal-close-btn">닫기</button>
+                </div>
+            </div> 
+            <script>
+                const modal = document.querySelector('.modal');
+                const modal_btn = document.querySelector('.modal-close-btn');
+                
+                // Modal display
+                modal.classList.remove('hidden');
+
+                // Modal - when close btn click.
+                const closeModal =()=> {
+                    modal.classList.add('hidden');
+                }
+                modal_btn.addEventListener("click", closeModal);
+            </script>
+        <?php endif ?>
+
         <!-- Back TO Top -->
         <button class="scroll-top" id="scroll-btn">
             <svg class="scroll-top__icon">
@@ -379,14 +393,5 @@
         <!-- FOOTER -->
         <footer class="footer" id="footer"></footer>
         <script def src="js/bundle.js"></script>
-        <script>
-            const modal = document.querySelector('.modal');
-            const modal_btn = document.querySelector('.modal-close-btn');
-        
-            const closeModal =()=> {
-                modal.classList.add('hidden');
-            }
-            modal_btn.addEventListener("click", closeModal);
-            </script>
     </body>
 </html>

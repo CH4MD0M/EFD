@@ -2,6 +2,7 @@
 session_start();
 
 require 'config/db_conn.php';
+require 'emailController.php';
 
 $errors = array();
 $username = "";
@@ -58,6 +59,8 @@ if (isset($_POST['signup-btn'])){
             $_SESSION['email'] = $email;
             $_SESSION['verified'] = $verified;
 
+            sendVerificationEmail($email, $token);
+
             echo('<script>alert("회원가입이 완료되었습니다.");</script>');
             header('location: index.php');
             exit();
@@ -99,18 +102,19 @@ if (isset($_POST['signin-btn'])){
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['verified'] = $user['verified'];
-    
-            echo('<script>alert("로그인 되었습니다.");</script>');
+            
+            // 메인페이지로 이동
             header('location: index.php');
             exit();
-    
         } else{
+            // 로그인 실패
             $errors['login_fail'] = "로그인 실패";
         }
 
     }
 
 }
+
 // 로그아웃 버트 클릭
 if(isset($_GET['logout'])){
     session_destroy();

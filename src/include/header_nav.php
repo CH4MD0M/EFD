@@ -7,15 +7,21 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <?php 
-            if (!isset($_SESSION['username']) || !isset($_SESSION['id'])){ ?>
-                <div class="header_nav"></div>
-        <?php
-            } else{ ?>
-                <div class="header_nav">
-                    <a href="index.php?logout=1" class="header__logout">로그아웃</a>
-                </div> 
-        <?php
-            }?>
+        <div class="header_nav">
+            <?php 
+                if ((isset($_SESSION['username']) || isset($_SESSION['id'])) && $_SESSION['verified']){ ?>
+            <a href="#" class="header__link user-info">
+                <svg class="header__icon">
+                    <use xlink:href="img/sprite.svg#icon-lock"></use>
+                </svg>
+                <span>내정보</span>
+            </a>
+            <a href="index.php?logout=1" class="header__link logout"><span>로그아웃</span></a>
+            <?php
+                } else if(!$_SESSION['verified']){?>
+            <div></div>
+            <?php
+                }?>
+        </div>
     </body>
 </html>

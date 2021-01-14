@@ -1,0 +1,38 @@
+.header_nav {
+    background-color: $color-white;
+    grid-column: full-start / full-end;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10rem;
+}
+
+.header {
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $color-grey-dark;
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-right: 3rem;
+        transition: all 0.3s;
+
+        & svg {
+            fill: $color-grey-dark;
+        }
+    }
+    &__link:hover {
+        color: $color-primary-dark-2;
+        & svg {
+            fill: $color-primary-dark-2;
+        }
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        transition: all 0.2s;
+    }
+}

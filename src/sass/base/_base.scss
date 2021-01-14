@@ -49,7 +49,8 @@ li {
 }
 
 .signInContainer,
-.signUpContainer {
+.signUpContainer,
+.InfoContainer {
     grid-template-rows: 7rem 11rem 80vh;
     overflow-x: hidden;
 }

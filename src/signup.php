@@ -96,6 +96,8 @@
             </div>
             <img class="wave2" src="img/wave2.png">
         </section>
+        
+        <!-- script -->
         <script src="js/bundle.js"></script>
         <script>
             (function(){

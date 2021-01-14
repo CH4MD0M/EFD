@@ -114,12 +114,12 @@
                     <!-- 로그인 -->
                     <li class="nav__item">
                         <?php 
-                            if(isset($_SESSION['id'])){ ?>
-                                <a href="#" class="nav__link">
+                            if(isset($_SESSION['id']) && $_SESSION['verified']){ ?>
+                                <a href="#" class="nav__link username">
                                     <span> <?php echo $_SESSION['username']; ?> 님  </span>
                                 </a>
                         <?php
-                            } else{ ?>
+                            } else if(!$_SESSION['verified']){ ?>
                                 <a href="signin.php" class="nav__link">
                                     <svg class="nav__icon">
                                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
