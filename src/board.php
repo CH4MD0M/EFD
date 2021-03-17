@@ -22,8 +22,8 @@
         <!-- SIDE MENU -->
         <div class="sidemenu">
             <ul>
-                <li><a href="customer.php">자주묻는 질문</a></li>
-                <li class="li-active"><a href="#">공지사항</a></li>
+                <li class="sidemenu__list"><a href="customer.php">자주묻는 질문</a></li>
+                <li class="sidemenu__list sidemenu-active"><a href="#">공지사항</a></li>
             </ul>
         </div>
 
@@ -44,8 +44,10 @@
                     </tr>
                 </thead>
                 <?php
-                    $sql = mq("SELECT * FROM board ORDER BY board_index DESC LIMIT 0,5"); 
-                    while($board = $sql->fetch_array()){
+                    $query = "SELECT * FROM board ORDER BY board_index DESC LIMIT 0,5"; 
+                    $select_all_posts_query = mysqli_query($conn, $query);
+
+                    while($board = mysqli_fetch_assoc($select_all_posts_query)){
                         // title변수에 DB에서 가져온 title을 선택
                         $title = $board["board_title"]; 
                         if(strlen($title)>30){ 
@@ -57,7 +59,7 @@
                             <tr>
                                 <td><?php echo $board['board_index']; ?></td>
                                 <td><a href=""><?php echo $title;?></a></td>
-                                <td><?php echo $board['publisher']?></td>
+                                <td><?php echo $board['board_author']?></td>
                                 <td><?php echo $board['board_date']?></td>
                                 <td><?php echo $board['hit']; ?></td>
                             </tr>
@@ -69,7 +71,7 @@
             <?php
                 } else{ ?>
                         <div id="write_btn">
-                            <a href="#"><button>글쓰기</button></a>
+                            <a href="write.php"><button>글쓰기</button></a>
                         </div>
             <?php
                 }?>
