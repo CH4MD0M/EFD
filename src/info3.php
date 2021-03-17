@@ -7,9 +7,9 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/style.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>교육자료 소개</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <title>교육안내</title>
     </head>
     <body class="post">
         <!-- Back TO Top -->
@@ -27,10 +27,10 @@
 
         <!-- SIDE MENU -->
         <div class="sidemenu">
-            <ul>
-                <li class="sidemenu__list sidemenu-active"><a href="#">Elementary</a></li>
-                <li class="sidemenu__list"><a href="intro2.php">Middle</a></li>
-                <li class="sidemenu__list"><a href="intro3.php">High</a></li>
+            <ul class="sidemenu-container">
+                <li class="sidemenu__list "><a href="info.php">초등부 과정</a></li>
+                <li class="sidemenu__list "><a href="info2.php">중등부 과정</a></li>
+                <li class="sidemenu__list sidemenu-active"><a href="#">고등부 과정</a></li>
             </ul>
         </div>
 

@@ -1,75 +1,23 @@
 .post {
     &__header {
         grid-column: side-end / full-end;
-        margin-top: 2rem;
+        margin: 2rem 2rem 0 0;
         background-image: url('../img/banner.png');
         background-size: cover;
+        border-radius: 10px;
         transform: scaleX(-1);
     }
     &__content {
-        grid-column: side-end / center-end;
+        grid-column: side-end / full-end;
+        margin-right: 2rem;
+        border-radius: 10px;
+        background-color: $color-grey-light-1;
     }
 
     &__section {
         font-size: 3rem;
-        padding: 10rem 2rem;
+        padding: 6rem 6rem;
     }
 }
 
 /* 공통 */
-
-/* 게시판 목록 */
-.customer__main {
-    margin: 4rem 0 20rem 0;
-    width: 100%;
-}
-
-.board__title {
-    font-size: 4rem;
-    margin-left: 2rem;
-}
-
-.table {
-    margin-top: 4rem;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 5rem repeat(auto, 4rem);
-
-    & a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    & th,
-    & td {
-        padding: 1rem;
-    }
-
-    & tr {
-        height: 100%;
-        display: grid;
-        grid-template-columns: 10rem 1fr repeat(3, 10rem);
-        text-align: center;
-    }
-
-    &__head {
-        & th {
-            margin: 0 0.4rem;
-            border-top: 2px solid #09c;
-            border-bottom: 1px solid #ccc;
-            font-size: 1.8rem;
-        }
-    }
-
-    &__body {
-        & td {
-            margin: 0 0.4rem;
-            border-bottom: 1px solid #ccc;
-            font-size: 1.4rem;
-        }
-    }
-}
-
-#write_btn {
-    margin-top: 2rem;
-}

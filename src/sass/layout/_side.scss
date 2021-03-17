@@ -20,8 +20,11 @@
     }
 }
 
-.li-active {
-    background-color: $color-primary-dark-1;
+.sidemenu-active {
+    background-color: $color-secondary-dark-1;
     border-radius: 10px;
     margin: 0 1rem;
+    & > a {
+        color: $color-white;
+    }
 }

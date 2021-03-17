@@ -28,9 +28,9 @@
         <!-- SIDE MENU -->
         <div class="sidemenu">
             <ul>
-                <li class="sidemenu__list sidemenu-active"><a href="#">Elementary</a></li>
+                <li class="sidemenu__list"><a href="intro.php">Elementary</a></li>
                 <li class="sidemenu__list"><a href="intro2.php">Middle</a></li>
-                <li class="sidemenu__list"><a href="intro3.php">High</a></li>
+                <li class="sidemenu__list sidemenu-active"><a href="#">High</a></li>
             </ul>
         </div>
 
