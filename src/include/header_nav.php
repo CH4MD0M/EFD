@@ -10,16 +10,26 @@
         <div class="header_nav">
             <?php 
                 if ((isset($_SESSION['username']) || isset($_SESSION['id'])) && $_SESSION['verified']){ ?>
-            <a href="#" class="header__link user-info">
-                <svg class="header__icon">
-                    <use xlink:href="img/sprite.svg#icon-lock"></use>
-                </svg>
-                <span>내정보</span>
-            </a>
-            <a href="index.php?logout=1" class="header__link logout"><span>로그아웃</span></a>
+                    <a href="#" class="header__link user-info">
+                        <svg class="header__icon">
+                            <use xlink:href="img/sprite.svg#icon-lock"></use>
+                        </svg>
+                        <span>내정보</span>
+                    </a>
+                
+                    <?php if($_SESSION['isadmin']){ ?>
+                            <a href="admin/index.php" class="header__link user-info">
+                                <svg class="header__icon">
+                                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                                </svg>
+                                <span>관리자 설정</span>
+                            </a>
+                    <?php
+                        }?>
+                    <a href="index.php?logout=1" class="header__link logout"><span>로그아웃</span></a>
             <?php
-                } else if(!$_SESSION['verified']){?>
-            <div></div>
+                } else {?>
+                    <div></div>
             <?php
                 }?>
         </div>

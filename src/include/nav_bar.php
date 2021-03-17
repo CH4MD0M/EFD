@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="navigation" id="navBar">
-            <div class="navigation__logo"><span>EFD</span>korea</div>
+            <div class="navigation__logo"><span>EFD</span>Korea</div>
             <nav class="navigation__nav">
                 <ul class="nav">
                     <!-- Home -->
@@ -32,19 +32,19 @@
 
                         <ul class="dropdown">
                             <li class="dropdown__item">
-                                <a href="#" class="dropdown__link">
+                                <a href="info.php" class="dropdown__link">
                                     <span>초등부 과정</span>
                                 </a>
                             </li>
 
                             <li class="dropdown__item">
-                                <a href="#" class="dropdown__link">
+                                <a href="info2.php" class="dropdown__link">
                                     <span>중등부 과정</span>
                                 </a>
                             </li>
 
                             <li class="dropdown__item">
-                                <a href="#" class="dropdown__link">
+                                <a href="info3.php" class="dropdown__link">
                                     <span>고등부 과정</span>
                                 </a>
                             </li>
@@ -62,19 +62,19 @@
 
                         <ul class="dropdown">
                             <li class="dropdown__item">
-                                <a href="#" class="dropdown__link">
+                                <a href="intro.php" class="dropdown__link">
                                     <span>Elementary</span>
                                 </a>
                             </li>
 
                             <li class="dropdown__item">
-                                <a href="#" class="dropdown__link">
+                                <a href="intro2.php" class="dropdown__link">
                                     <span>Middle</span>
                                 </a>
                             </li>
 
                             <li class="dropdown__item">
-                                <a href="#" class="dropdown__link"> <span>High</span></a>
+                                <a href="intro3.php" class="dropdown__link"> <span>High</span></a>
                             </li>
                         </ul>
                     </li>
@@ -90,7 +90,7 @@
 
                         <ul class="dropdown">
                             <li class="dropdown__item">
-                                <a href="#" class="dropdown__link"> <span>자주묻는 질문</span></a>
+                                <a href="customer.php" class="dropdown__link"> <span>자주묻는 질문</span></a>
                             </li>
 
                             <li class="dropdown__item">
@@ -119,7 +119,7 @@
                                     <span> <?php echo $_SESSION['username']; ?> 님  </span>
                                 </a>
                         <?php
-                            } else if(!$_SESSION['verified']){ ?>
+                            } else { ?>
                                 <a href="signin.php" class="nav__link">
                                     <svg class="nav__icon">
                                         <use xlink:href="img/sprite.svg#icon-keyboard_arrow_right"></use>
