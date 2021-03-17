@@ -47,10 +47,11 @@ if (isset($_POST['signup-btn'])){
         $password = password_hash($password, PASSWORD_DEFAULT);
         $token = bin2hex(random_bytes(50));
         $verified = intval(false);
+        $isadmin = intval(false);
 
-        $sql = "INSERT INTO members (username, email, verified, token, password) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO members (username, email, verified, token, password, isadmin) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param('ssiss', $username, $email, $verified, $token, $password);
+        $stmt->bind_param('ssiiss', $username, $email, $verified, $token, $password, $isadmin);
 
         if($stmt->execute()){
             $user_id = $conn->insert_id;
@@ -58,10 +59,11 @@ if (isset($_POST['signup-btn'])){
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
             $_SESSION['verified'] = $verified;
+            $_SESSION['isadmin'] = $isadmin;
 
             sendVerificationEmail($email, $token);
 
-            echo('<script>alert("회원가입이 완료되었습니다.");</script>');
+            echo"<script> alert('회원가입이 완료되었습니다.'); </script>";
             header('location: index.php');
             exit();
 
@@ -102,6 +104,7 @@ if (isset($_POST['signin-btn'])){
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['verified'] = $user['verified'];
+            $_SESSION['isadmin'] = $user['isadmin'];
             
             // 메인페이지로 이동
             header('location: index.php');
@@ -122,6 +125,7 @@ if(isset($_GET['logout'])){
     unset($_SESSION['username']);
     unset($_SESSION['email']);
     unset($_SESSION['verified']);
+    unset($_SESSION['isadmin']);
     header('location: signin.php');
     exit();
 }
