@@ -1,3 +1,58 @@
 .customer__main {
     grid-column: side-end / center-end;
 }
+
+.qna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion {
+    max-width: 120rem;
+
+    &__contentBox {
+        position: relative;
+        margin: 2rem 2rem;
+    }
+}
+
+.contentBox {
+    &__label {
+        position: relative;
+        padding: 1rem;
+        background: $color-secondary;
+        font-size: 2.5rem;
+        color: $color-white;
+    }
+    &__label::before {
+        content: '+';
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+        font-size: 4rem;
+    }
+
+    &__content {
+        position: relative;
+        background: $color-white;
+        height: 0;
+        font-size: 2rem;
+        overflow: hidden;
+        transition: all 0.5s;
+        overflow-y: auto;
+    }
+}
+
+.accordion-active {
+    .contentBox__content {
+        height: min-content;
+        padding: 3rem;
+    }
+
+    .contentBox__label::before {
+        content: '-';
+        font-size: 4.5rem;
+    }
+}

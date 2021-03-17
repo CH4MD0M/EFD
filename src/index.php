@@ -165,7 +165,7 @@
         <!-- HOME SECTION -->
         <section class="homes">
             <!-- HOME TITLE -->
-            <div class="title--primary">Some of our top services</div>
+            <div class="title--primary">OM School 소개</div>
 
             <!-- HOME ITEM BOX -->
             <div class="homes__items">
@@ -173,6 +173,9 @@
                 <div class="item">
                     <div class="item__icon">
                         <img src="./img/svg/book.svg" alt="book" />
+                    </div>
+                    <div class="item__title">
+                        <p>새로운 교육 패러다임</p>
                     </div>
                     <div class="item__content">
                         <p>
@@ -188,6 +191,9 @@
                     <div class="item__icon">
                         <img src="./img/svg/earth.svg" alt="" />
                     </div>
+                    <div class="item__title">
+                        <p>글로벌 인재 육성</p>
+                    </div>
                     <div class="item__content">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ducimus
@@ -202,6 +208,9 @@
                     <div class="item__icon">
                         <img src="./img/svg/study.svg" alt="" />
                     </div>
+                    <div class="item__title">
+                        <p>교육 비전</p>
+                    </div>
                     <div class="item__content">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ducimus
@@ -215,6 +224,9 @@
                 <div class="item">
                     <div class="item__icon">
                         <img src="./img/svg/online.svg" alt="" />
+                    </div>
+                    <div class="item__title">
+                        <p>온라인 과정</p>
                     </div>
                     <div class="item__content">
                         <p>

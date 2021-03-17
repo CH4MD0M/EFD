@@ -1,4 +1,4 @@
-// COLOR VARIABLES
+// 색상 값
 
 $color-primary: #88bdbc;
 $color-primary-dark-1: #254e58;
@@ -7,7 +7,7 @@ $color-primary-dark-2: #112d32;
 $color-secondary: #6e6658;
 $color-secondary-dark-1: #4f4a41;
 
-/* 
+/* 테스트 색상
 $color-primary: #70c570;
 $color-primary-dark-1: #5ea15e;
 $color-primary-dark-2: #4e8a4e;
@@ -15,6 +15,7 @@ $color-primary-dark-2: #4e8a4e;
 $color-secondary: #e36b2c;
 $color-secondary-dark-1: #dc5925;
  */
+
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
@@ -25,14 +26,14 @@ $color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
-//FONT
+// FONT
 $default-font-size: 1.6rem;
 
 // SHADOW
 $shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
 // RESPONSIVE BREAKPOINTS
-$bp-largest: 75em; // 1200px
+$bp-largest: 93.75em; // 1500px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px
 $bp-small: 37.5em; // 600px;

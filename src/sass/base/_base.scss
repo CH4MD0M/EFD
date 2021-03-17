@@ -27,7 +27,7 @@ li {
     list-style: none;
 }
 
-// GRID 설정
+// 전체 GRID 설정
 .grid {
     grid-template-columns:
         [full-start] 1fr
@@ -37,8 +37,19 @@ li {
 }
 .container {
     grid-template-rows: 7rem 11rem 60vh min-content 40vw min-content 20rem;
-}
 
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns:
+            [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+            [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 6rem);
+    }
+}
+// 상세 페이지
 .post {
     grid-template-rows: 7rem 11rem 40vh min-content 20rem;
     grid-template-columns:
@@ -48,6 +59,17 @@ li {
         [full-end];
 }
 
+// 게시판
+.board {
+    grid-template-rows: 7rem 11rem min-content 20rem;
+    grid-template-columns:
+        [full-start] 1fr [side-start] 15vw [side-end center-start]
+        repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
+        [center-end] 1fr
+        [full-end];
+}
+
+// 회원가입
 .signInContainer,
 .signUpContainer,
 .InfoContainer {

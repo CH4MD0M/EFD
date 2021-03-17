@@ -19,7 +19,7 @@
         margin: 0 10rem;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 5rem;
+        grid-gap: 12rem;
     }
 }
 
@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 30rem;
 
     &__icon {
         margin-bottom: 4rem;
@@ -35,6 +36,16 @@
             width: 22rem;
             height: 22rem;
         }
+    }
+
+    &__title {
+        display: inline-block;
+        padding: 1rem;
+        height: 19rem;
+        text-align: center;
+        font-size: 5rem;
+        font-weight: 700;
+        color: $color-secondary;
     }
 
     &__content {
@@ -97,11 +108,7 @@
 
         &--back {
             transform: rotateY(180deg);
-            background-image: linear-gradient(
-                to right bottom,
-                $color-primary,
-                $color-primary-dark-1
-            );
+            background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark-1);
         }
     }
 
@@ -124,18 +131,15 @@
         border-top-right-radius: 3px;
 
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary, $color-white),
-                url(../img/slide/slide-2.png);
+            background-image: linear-gradient(to right bottom, $color-secondary, $color-white), url(../img/slide/slide-2.png);
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-secondary, $color-white),
-                url(../img/slide/slide-2.png);
+            background-image: linear-gradient(to right bottom, $color-secondary, $color-white), url(../img/slide/slide-2.png);
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-secondary, $color-white),
-                url(../img/slide/slide-2.png);
+            background-image: linear-gradient(to right bottom, $color-secondary, $color-white), url(../img/slide/slide-2.png);
         }
     }
 
@@ -157,26 +161,14 @@
         box-decoration-break: clone;
 
         &--1 {
-            background-image: linear-gradient(
-                to right bottom,
-                rgba($color-secondary, 0.85),
-                rgba($color-secondary-dark-1, 0.85)
-            );
+            background-image: linear-gradient(to right bottom, rgba($color-secondary, 0.85), rgba($color-secondary-dark-1, 0.85));
         }
 
         &--2 {
-            background-image: linear-gradient(
-                to right bottom,
-                rgba($color-secondary, 0.85),
-                rgba($color-secondary-dark-1, 0.85)
-            );
+            background-image: linear-gradient(to right bottom, rgba($color-secondary, 0.85), rgba($color-secondary-dark-1, 0.85));
         }
         &--3 {
-            background-image: linear-gradient(
-                to right bottom,
-                rgba($color-secondary, 0.85),
-                rgba($color-secondary-dark-1, 0.85)
-            );
+            background-image: linear-gradient(to right bottom, rgba($color-secondary, 0.85), rgba($color-secondary-dark-1, 0.85));
         }
     }
 
