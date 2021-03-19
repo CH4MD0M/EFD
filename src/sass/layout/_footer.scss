@@ -7,7 +7,9 @@
         margin-top: 2rem;
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        // grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-columns: repeat(4, minmax(min-content, 1fr));
+
         grid-gap: 2rem;
         align-items: center;
     }

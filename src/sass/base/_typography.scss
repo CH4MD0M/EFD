@@ -1,13 +1,13 @@
 .title {
-  &--primary {
-    color: $color-black;
-    font-size: 8rem;
-    font-weight: 700;
-    margin-bottom: 10rem;
-    
-    &>span{
-        color: $color-secondary;
+    &--primary {
+        color: $color-black;
+        font-size: 8rem;
+        font-weight: 700;
+        margin-bottom: 10rem;
+        text-align: center;
 
+        & > span {
+            color: $color-secondary;
+        }
     }
-  }
 }

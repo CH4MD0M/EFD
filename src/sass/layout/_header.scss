@@ -8,13 +8,6 @@
     &-container {
         width: 100%;
         height: 100%;
-
-        @media only screen and (max-width: $bp-large) {
-            width: 50%;
-            height: 50%;
-            justify-content: flex-end;
-            align-items: center;
-        }
     }
 
     &-slide {
@@ -47,8 +40,11 @@
         font-weight: 700;
         color: $color-white;
         background-color: $color-secondary-dark-1;
-
         border-radius: 12px;
+
+        @media only screen and(max-width : $bp-medium) {
+            display: none;
+        }
 
         &::after {
             display: none;

@@ -10,6 +10,10 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
 
+    @media only screen and(max-width : $bp-largest) {
+        font-size: 50%; //  8px / 16px = 50% -> 1rem = 8px
+    }
+
     // firfox scrollbar
     scrollbar-width: none;
 }
@@ -37,18 +41,8 @@ li {
 }
 .container {
     grid-template-rows: 7rem 11rem 60vh min-content 40vw min-content 20rem;
-
-    @media only screen and (max-width: $bp-large) {
-        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-        grid-template-columns:
-            [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-            [center-end] minmax(6rem, 1fr) [full-end];
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 6rem calc(100vh - 6rem);
-    }
 }
+
 // 상세 페이지
 .post {
     grid-template-rows: 7rem 11rem 40vh min-content 20rem;
