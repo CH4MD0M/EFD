@@ -84,11 +84,7 @@
             </div>
         </section>
         <script src="js/bundle.js"></script>
-        <script>
-            (function(){
-                window.scrollTo(0,500);
-            })();
-        </script>
+        
     </body>
 </html>
 

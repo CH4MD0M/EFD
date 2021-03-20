@@ -21,7 +21,7 @@
 
         <!-- LOGIN SECTION -->
         <section class="sign-in-up-container">
-            <div class="signIn-container">
+            <div class="signUp-container">
                 <div class="signUp-content">
                     <form class="signUp-form" action="signup.php" method="post">
                         <img class="signUp-form__img" src="img/avatar.svg">
@@ -99,11 +99,7 @@
         
         <!-- script -->
         <script src="js/bundle.js"></script>
-        <script>
-            (function(){
-                window.scrollTo(0,500);
-            })();
-        </script>
+        
     </body>
 </html>
 

@@ -184,3 +184,57 @@
         animation: moveInLeft 1s forwards 0.2s;
     }
 }
+
+// 반응형
+// 태블릿
+@media only screen and(max-width : $bp-large) {
+    .signIn-container,
+    .signUp-container {
+        grid-gap: 5rem;
+    }
+
+    // 폼
+    .signIn-form,
+    .signUp-form {
+        width: 38rem;
+    }
+
+    // 이미지
+    .signIn-img img,
+    .signUp-img img {
+        width: 40rem;
+    }
+
+    // 타이틀
+    .signIn-form__title,
+    .signUp-form__title {
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+}
+
+// 모바일
+@media only screen and(max-width : $bp-medium) {
+    .signIn-container,
+    .signUp-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+    }
+    .signIn-container {
+        grid-gap: 20rem;
+    }
+    .signUp-container {
+        margin-top: 30rem;
+    }
+
+    // 이미지
+    .wave,
+    .wave2 {
+        opacity: 0;
+        width: 0;
+    }
+    .signIn-img img,
+    .signUp-img img {
+        display: none;
+    }
+}
