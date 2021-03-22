@@ -28,6 +28,7 @@
             </ul>
         </div>
 
+        <!-- WRITE SECTION -->
         <section class="board__write">
             <form class="write__container" action="writeCheck.php" method="post">
                 <div class="write--id">

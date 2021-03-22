@@ -58,7 +58,7 @@
                         <tbody class="table__body">
                             <tr>
                                 <td><?php echo $board['board_index']; ?></td>
-                                <td><a href=""><?php echo $title;?></a></td>
+                                <td><a href="read.php?idx=<?php echo $board['board_index'];?>"><?php echo $title;?></a></td>
                                 <td><?php echo $board['board_author']?></td>
                                 <td><?php echo $board['board_date']?></td>
                                 <td><?php echo $board['hit']; ?></td>

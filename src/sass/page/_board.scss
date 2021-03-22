@@ -102,3 +102,59 @@
         }
     }
 }
+
+// ////////////////////////////////////////////////////////
+// 글읽기
+.board__read {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-rows: repeat(2, min-content) 1fr 3rem;
+    margin: 10rem 0;
+}
+// 제목
+.read__title {
+    border-top: 2px solid $color-grey-light-2;
+    border-bottom: 1px solid $color-grey-light-2;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: $color-black;
+    padding: 1.5rem 0;
+
+    & > p {
+        margin-left: 4rem;
+    }
+}
+
+// 게시글 정보
+.read__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem 0 1.5rem 4rem;
+    border-bottom: 1px solid $color-grey-light-2;
+    font-size: 1.8rem;
+
+    & > span {
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+// 작성자, 날짜, 조회수 아이콘
+.info-icon {
+    width: 2.3rem;
+    height: 2.3rem;
+    fill: $color-secondary;
+    margin-right: 1rem;
+}
+
+.read__content {
+    border-bottom: 1px solid $color-grey-light-2;
+    font-size: 1.8rem;
+    padding: 2rem 4rem;
+}
+
+.read__menu {
+    text-align: right;
+}
