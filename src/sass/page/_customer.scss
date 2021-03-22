@@ -1,5 +1,9 @@
 .customer__main {
     grid-column: side-end / center-end;
+    @media only screen and(max-width : $bp-medium) {
+        grid-column: side-start / full-end;
+        margin: 2rem;
+    }
 }
 
 .qna {

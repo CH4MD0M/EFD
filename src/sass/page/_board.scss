@@ -1,7 +1,13 @@
 /* 게시판 목록 */
 .customer__main {
-    margin: 4rem 0 20rem 0;
-    width: 100%;
+    margin: 4rem 2rem 20rem 0;
+    grid-column: side-end / full-end;
+    width: auto;
+    @media only screen and(max-width : $bp-medium) {
+        grid-column: side-start / full-end;
+        width: auto;
+        margin: 2rem;
+    }
 }
 
 .board__title {

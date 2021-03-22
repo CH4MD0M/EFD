@@ -6,12 +6,23 @@
         background-size: cover;
         border-radius: 10px;
         transform: scaleX(-1);
+        @media only screen and(max-width : $bp-medium) {
+            grid-column: side-start / full-end;
+            margin: 2rem;
+        }
     }
     &__content {
         grid-column: side-end / full-end;
+        // margin-right: 2rem;
         margin-right: 2rem;
+        margin-top: 2rem;
         border-radius: 10px;
         background-color: $color-grey-light-1;
+
+        @media only screen and(max-width : $bp-medium) {
+            grid-column: side-start / full-end;
+            margin: 2rem;
+        }
     }
 
     &__section {
