@@ -67,12 +67,15 @@
               <?php } ?>
             </table>
             <?php 
-                if (!isset($_SESSION['username']) || !isset($_SESSION['id'])){ ?>
+                if ($_SESSION['isadmin']===1){ ?>
+                    <div class="list__menu">
+                        <button class="list-btn board-btn">
+                            <a href="write.php">글쓰기</a>
+                        </button>
+                    </div>
             <?php
                 } else{ ?>
-                        <div id="write_btn">
-                            <a href="write.php"><button>글쓰기</button></a>
-                        </div>
+                
             <?php
                 }?>
             

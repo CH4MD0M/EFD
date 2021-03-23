@@ -1,6 +1,7 @@
 /* 게시판 목록 */
 .customer__main {
-    margin: 4rem 2rem 20rem 0;
+    margin: 4rem 2rem 4rem 0;
+    padding: 2rem 6rem 8rem 6rem;
     grid-column: side-end / full-end;
     width: auto;
     @media only screen and(max-width : $bp-medium) {
@@ -55,9 +56,8 @@
         }
     }
 }
-
-#write_btn {
-    margin-top: 2rem;
+.list__menu {
+    text-align: right;
 }
 
 // ////////////////////////////////////////////////////////
@@ -72,34 +72,21 @@
         grid-column: center-start / center-end;
     }
 
-    &--id {
+    &__id {
         margin-bottom: 3rem;
         width: 100%;
         font-size: 2rem;
     }
 
-    &--title > input {
+    &__title > input {
         width: 50%;
         height: 5rem;
         margin: 1rem 0;
     }
 
-    &--content > input {
+    &__content > input {
         width: 100%;
         height: 40rem;
-    }
-
-    &--btn {
-        display: inline-block;
-        text-align: right;
-        width: 100%;
-
-        & > button {
-            margin-top: 1rem;
-            width: 7rem;
-            height: 3rem;
-            font-size: 1.5rem;
-        }
     }
 }
 
@@ -156,5 +143,8 @@
 }
 
 .read__menu {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 3.5rem;
 }

@@ -100,7 +100,27 @@
 }
 
 // 게시판
-.read-btn {
+// .write-btn {
+//     display: inline-block;
+//     padding: 1rem 2rem;
+//     margin: 1.5rem 0;
+//     border: 1px solid $color-grey-dark-2;
+//     border-radius: 10px;
+//     transition: 0.3s;
+
+//     &:hover {
+//         transform: translateY(-3px);
+//         box-shadow: $shadow;
+//     }
+
+//     & > input {
+//         font-size: 1.5rem;
+//         color: $color-black;
+//         text-decoration: none;
+//         list-style: none;
+//     }
+// }
+.board-btn {
     display: inline-block;
     padding: 1rem 2rem;
     margin: 1.5rem 0;
@@ -112,11 +132,28 @@
         transform: translateY(-3px);
         box-shadow: $shadow;
     }
+}
 
+.list-btn,
+.read-btn {
     & > a {
         font-size: 1.5rem;
         color: $color-black;
         text-decoration: none;
         list-style: none;
+    }
+}
+.read-btn {
+    margin: 0 0.5rem;
+}
+
+.write-btn {
+    & > input {
+        border: none;
+        font-size: 1.5rem;
+        color: $color-black;
+        text-decoration: none;
+        list-style: none;
+        background-color: transparent;
     }
 }

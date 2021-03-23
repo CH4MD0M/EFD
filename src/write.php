@@ -31,20 +31,21 @@
         <!-- WRITE SECTION -->
         <section class="board__write">
             <form class="write__container" action="writeCheck.php" method="post">
-                <div class="write--id">
+                <div class="write__id">
                     <span><?php echo $_SESSION['username']; ?></span>
                 </div>
-                <div class="write--pw">
+                <div class="write__pw">
                     <input type="password" name="pw" id="upw"  placeholder="비밀번호">  
                 </div>
-                <div class="write--title">
+                <div class="write__title">
                     <input name="title" id="utitle" placeholder="제목" maxlength="100">
                 </div>
                 
-                <div class="write--content">
+                <div class="write__content">
                     <input name="content" id="ucontent" placeholder="내용">
                 </div>
-                <div class="write--btn">
+
+                <div class="write-btn board-btn">
                     <input name="create_post" type="submit" value="글작성">
                 </div>
             </form>

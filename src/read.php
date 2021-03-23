@@ -71,11 +71,22 @@
             <!-- 목록 -->
             <div class="read__menu">
                 
-                <button class="read-btn">   
+                <button class="read-btn board-btn">   
                     <a href="board.php">목록</a>
                 </button>
-                <!-- <li><a href="modify.php?idx=<?php echo $board['board_index']; ?>">[수정]</a></li>
-                <li><a href="delete.php?idx=<?php echo $board['board_index']; ?>">[삭제]</a></li> -->
+                <?php 
+                    if ($_SESSION['username']===$board['board_author']){ ?>
+                        <button class="read-btn board-btn">
+                            <a href="modify.php?idx=<?php echo $board['board_index']; ?>">수정</a>
+                        </button>
+                        <button class="read-btn board-btn">
+                            <a href="delete.php?idx=<?php echo $board['board_index']; ?>">삭제</a>
+                        </button>
+                <?php
+                    } else{ ?>
+
+                <?php
+                    }?>
             </div>
         </section>
 
