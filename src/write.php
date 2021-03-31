@@ -11,7 +11,7 @@
         />
         <link href="css/style.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>고객 지원</title>
+        <title>글 작성</title>
     </head>
     <body class="board">
         <!-- 상단 표시줄 -->
@@ -42,7 +42,7 @@
                 </div>
                 
                 <div class="write__content">
-                    <input name="content" id="ucontent" placeholder="내용">
+                    <textarea name="content" id="ucontent" placeholder="내용"></textarea>
                 </div>
 
                 <div class="write-btn board-btn">
@@ -56,3 +56,4 @@
         <script src="js/bundle.js"></script>
     </body>
 </html>
+

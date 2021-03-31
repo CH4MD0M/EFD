@@ -1,150 +1,169 @@
 /* 게시판 목록 */
 .customer__main {
-    margin: 4rem 2rem 4rem 0;
-    padding: 2rem 6rem 8rem 6rem;
-    grid-column: side-end / full-end;
+  margin: 4rem 2rem 4rem 0;
+  padding: 2rem 6rem 8rem 6rem;
+  grid-column: side-end / full-end;
+  width: auto;
+  @media only screen and(max-width : $bp-medium) {
+    grid-column: side-start / full-end;
     width: auto;
-    @media only screen and(max-width : $bp-medium) {
-        grid-column: side-start / full-end;
-        width: auto;
-        margin: 2rem;
-    }
+    margin: 2rem;
+  }
 }
 
 .board__title {
-    font-size: 4rem;
-    margin-left: 2rem;
+  font-size: 4rem;
+  margin-left: 2rem;
 }
 
 .table {
-    margin-top: 4rem;
-    width: 100%;
+  margin-top: 4rem;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 5rem repeat(auto, 4rem);
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  & th,
+  & td {
+    padding: 1rem;
+  }
+
+  & tr {
+    height: 100%;
     display: grid;
-    grid-template-rows: 5rem repeat(auto, 4rem);
+    grid-template-columns: 10rem 1fr repeat(3, 10rem);
+    text-align: center;
+  }
 
-    & a {
-        text-decoration: none;
-        color: inherit;
+  &__head {
+    & th {
+      margin: 0 0.4rem;
+      border-top: 2px solid #09c;
+      border-bottom: 1px solid #ccc;
+      font-size: 1.8rem;
     }
+  }
 
-    & th,
+  &__body {
     & td {
-        padding: 1rem;
+      margin: 0 0.4rem;
+      border-bottom: 1px solid #ccc;
+      font-size: 1.4rem;
     }
-
-    & tr {
-        height: 100%;
-        display: grid;
-        grid-template-columns: 10rem 1fr repeat(3, 10rem);
-        text-align: center;
-    }
-
-    &__head {
-        & th {
-            margin: 0 0.4rem;
-            border-top: 2px solid #09c;
-            border-bottom: 1px solid #ccc;
-            font-size: 1.8rem;
-        }
-    }
-
-    &__body {
-        & td {
-            margin: 0 0.4rem;
-            border-bottom: 1px solid #ccc;
-            font-size: 1.4rem;
-        }
-    }
+  }
 }
+
+// 하단 메뉴 (리스트 번호, 글쓰기 버튼)
 .list__menu {
-    text-align: right;
+  display: grid;
+  grid-template-columns: 25% repeat(2, 1fr);
+  margin-top: 4rem;
+}
+.page_num {
+  grid-column: 2 / 3;
+  margin-top: 2.5rem;
+
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+  }
+
+  & > ul li {
+    font-size: 1.6rem;
+  }
 }
 
 // ////////////////////////////////////////////////////////
 // 글쓰기
 .board__write {
-    margin: 10rem 0;
-    grid-column: center-start / center-end;
+  margin: 10rem 0;
+  grid-column: center-start / center-end;
 }
 
 .write {
-    &__container {
-        grid-column: center-start / center-end;
-    }
+  &__container {
+    grid-column: center-start / center-end;
+  }
 
-    &__id {
-        margin-bottom: 3rem;
-        width: 100%;
-        font-size: 2rem;
-    }
+  &__id {
+    margin-bottom: 3rem;
+    width: 100%;
+    font-size: 2rem;
+  }
 
-    &__title > input {
-        width: 50%;
-        height: 5rem;
-        margin: 1rem 0;
-    }
+  &__title > input {
+    width: 50%;
+    height: 5rem;
+    margin: 1rem 0;
+  }
 
-    &__content > input {
-        width: 100%;
-        height: 40rem;
-    }
+  &__content > textarea {
+    width: 100%;
+    height: 40rem;
+  }
 }
 
 // ////////////////////////////////////////////////////////
 // 글읽기
 .board__read {
-    grid-column: center-start / center-end;
-    display: grid;
-    grid-template-rows: repeat(2, min-content) 1fr 3rem;
-    margin: 10rem 0;
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-rows: repeat(2, min-content) 1fr 3rem;
+  margin: 10rem 0;
 }
 // 제목
 .read__title {
-    border-top: 2px solid $color-grey-light-2;
-    border-bottom: 1px solid $color-grey-light-2;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: $color-black;
-    padding: 1.5rem 0;
+  border-top: 2px solid $color-grey-light-2;
+  border-bottom: 1px solid $color-grey-light-2;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $color-black;
+  padding: 1.5rem 0;
 
-    & > p {
-        margin-left: 4rem;
-    }
+  & > p {
+    margin-left: 4rem;
+  }
 }
 
 // 게시글 정보
 .read__info {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1.5rem 0 1.5rem 4rem;
-    border-bottom: 1px solid $color-grey-light-2;
-    font-size: 1.8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem 0 1.5rem 4rem;
+  border-bottom: 1px solid $color-grey-light-2;
+  font-size: 1.8rem;
 
-    & > span {
-        margin-right: 2rem;
-        display: flex;
-        align-items: center;
-    }
+  & > span {
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+  }
 }
 
 // 작성자, 날짜, 조회수 아이콘
 .info-icon {
-    width: 2.3rem;
-    height: 2.3rem;
-    fill: $color-secondary;
-    margin-right: 1rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  fill: $color-secondary;
+  margin-right: 1rem;
 }
 
 .read__content {
-    border-bottom: 1px solid $color-grey-light-2;
-    font-size: 1.8rem;
-    padding: 2rem 4rem;
+  border-bottom: 1px solid $color-grey-light-2;
+  font-size: 1.8rem;
+  padding: 2rem 4rem;
 }
 
 .read__menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 3.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 3.5rem;
 }

@@ -1,102 +1,102 @@
 // BUTTON BASE STYLING
 .btn {
-    &,
-    &:link,
-    &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1.5rem 4rem;
-        position: relative;
-        display: inline-block; /* 문자로 취급. 위에서 text-align: center; 적용하여 정렬. */
-        border: 1px solid $color-white;
-        border-radius: 10rem;
-        font-size: $default-font-size;
-        color: aliceblue;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    position: relative;
+    display: inline-block; /* 문자로 취급. 위에서 text-align: center; 적용하여 정렬. */
+    border: 1px solid $color-white;
+    border-radius: 10rem;
+    font-size: $default-font-size;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: $shadow;
-    }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow;
+  }
 }
 
 // BACK TO TOP BUTTON
 .scroll-top {
-    position: fixed;
-    right: 4rem;
-    bottom: 7rem;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    opacity: 0;
-    transition: all 0.3s;
+  position: fixed;
+  right: 4rem;
+  bottom: 7rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s;
 
-    &__icon {
-        fill: $color-secondary-dark-1;
-        width: 6rem;
-        z-index: 10000000;
-        transition: 0.4s;
-    }
+  &__icon {
+    fill: $color-secondary-dark-1;
+    width: 6rem;
+    z-index: 10000000;
+    transition: 0.4s;
+  }
 
-    &__icon:hover {
-        transform: scale(1.2);
-    }
-    @media only screen and(max-width : $bp-medium) {
-        display: none;
-    }
+  &__icon:hover {
+    transform: scale(1.2);
+  }
+  @media only screen and(max-width : $bp-medium) {
+    display: none;
+  }
 }
 
 .scroll__active {
-    opacity: 1;
-    right: 4rem;
-    bottom: 7rem;
+  opacity: 1;
+  right: 4rem;
+  bottom: 7rem;
 }
 
 // 로그인 회원가입 container
 .btn-container {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 // 로그인 버튼
 .signIn-btn,
 .signUp-btn {
-    display: block;
-    width: 100%;
-    height: 5rem;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    background-color: $color-primary;
-    color: $color-white;
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    cursor: pointer;
-    transition: 0.5s;
+  display: block;
+  width: 100%;
+  height: 5rem;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.5s;
 
-    &:hover {
-        background-color: $color-primary-dark-1;
-    }
+  &:hover {
+    background-color: $color-primary-dark-1;
+  }
 }
 
 .naver {
-    background-color: #2db400;
-    &:hover {
-        background-color: #1f7902;
-    }
+  background-color: #2db400;
+  &:hover {
+    background-color: #1f7902;
+  }
 }
 .kakao {
-    background-color: #ffd800;
-    &:hover {
-        background-color: #b49900;
-    }
+  background-color: #ffd800;
+  &:hover {
+    background-color: #b49900;
+  }
 }
 .facebook {
-    background-color: #3b5999;
-    &:hover {
-        background-color: #2b406e;
-    }
+  background-color: #3b5999;
+  &:hover {
+    background-color: #2b406e;
+  }
 }
 
 // 게시판
@@ -121,39 +121,41 @@
 //     }
 // }
 .board-btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    margin: 1.5rem 0;
-    border: 1px solid $color-grey-dark-2;
-    border-radius: 10px;
-    transition: 0.3s;
+  grid-column: 3 / 4;
+  display: inline-block;
+  width: 10rem;
+  padding: 1rem 2rem;
+  margin: 1.5rem 0 1.5rem auto;
+  border: 1px solid $color-grey-dark-2;
+  border-radius: 10px;
+  transition: 0.3s;
 
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: $shadow;
-    }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow;
+  }
 }
 
 .list-btn,
 .read-btn {
-    & > a {
-        font-size: 1.5rem;
-        color: $color-black;
-        text-decoration: none;
-        list-style: none;
-    }
+  & > a {
+    font-size: 1.5rem;
+    color: $color-black;
+    text-decoration: none;
+    list-style: none;
+  }
 }
 .read-btn {
-    margin: 0 0.5rem;
+  margin: 0 0.5rem;
 }
 
 .write-btn {
-    & > input {
-        border: none;
-        font-size: 1.5rem;
-        color: $color-black;
-        text-decoration: none;
-        list-style: none;
-        background-color: transparent;
-    }
+  & > input {
+    border: none;
+    font-size: 1.5rem;
+    color: $color-black;
+    text-decoration: none;
+    list-style: none;
+    background-color: transparent;
+  }
 }
